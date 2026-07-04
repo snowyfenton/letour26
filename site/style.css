@@ -118,14 +118,6 @@ main {
   font-size: 0.8rem;
   padding: 8px 0 2px;
 }
-details.mapfold summary {
-  cursor: pointer;
-  color: var(--yellow);
-  font-weight: 600;
-  padding: 4px 8px;
-  list-style-position: inside;
-}
-
 /* Section titles */
 h2.section {
   font-size: 0.85rem;
@@ -215,6 +207,43 @@ td.gap { text-align: right; font-variant-numeric: tabular-nums; color: var(--tex
 .weather-fail { color: var(--muted); }
 
 .note-card { color: var(--muted); font-style: italic; }
+
+/* Fantasy picks */
+.fantasy-provenance {
+  color: var(--muted);
+  font-size: 0.82rem;
+  margin: 0 4px 10px;
+}
+.fantasy-provenance strong { color: var(--yellow); }
+.fantasy-day .fd-num {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--yellow);
+}
+.fd-route { color: var(--muted); font-size: 0.85rem; margin-top: 6px; }
+.fd-headline { margin-top: 8px; font-weight: 600; }
+.fd-ridertype { margin-top: 6px; font-size: 0.92rem; color: var(--text); }
+.fd-ridertype strong { color: var(--green); }
+ul.fpicks { list-style: none; margin: 10px 0 0; padding: 0; }
+.fpick {
+  background: var(--card-2);
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin-top: 6px;
+  font-size: 0.9rem;
+}
+.fp-rider { font-weight: 700; }
+.fp-team { color: var(--muted); font-size: 0.8rem; margin-left: 6px; }
+.fp-why { display: block; color: var(--muted); font-size: 0.83rem; margin-top: 2px; }
+.fantasy-strategy { font-size: 0.92rem; }
+.fantasy-strategy .fs-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--yellow);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
 
 footer {
   text-align: center;

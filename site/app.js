@@ -99,13 +99,10 @@ function render(app, stagesDoc, data, stage) {
     <figcaption>Official stage profile — letour.fr</figcaption>
   </figure>`);
 
-  parts.push(`<details class="card mapfold">
-    <summary>Show route map</summary>
-    <figure class="imgcard" style="margin:0">
-      <img src="img/stage-${nn}-map.jpg" alt="Stage ${stage.n} route map" loading="lazy"
-           onerror="this.closest('details').style.display='none'">
-    </figure>
-  </details>`);
+  parts.push(`<figure class="card imgcard">
+    <img src="img/stage-${nn}-map.jpg" alt="Stage ${stage.n} route map" loading="lazy"
+         onerror="this.closest('figure').style.display='none'">
+  </figure>`);
 
   // Weather placeholder — filled async
   parts.push(`<h2 class="section">Weather in ${esc(stage.finish)}</h2>
@@ -150,7 +147,44 @@ function render(app, stagesDoc, data, stage) {
       <div class="card note-card">${esc(data.prevStageSummary)}</div>`);
   }
 
+  if (data.fantasy && Array.isArray(data.fantasy.days) && data.fantasy.days.length) {
+    parts.push(renderFantasy(data.fantasy, stagesDoc));
+  }
+
   app.innerHTML = parts.join("");
+}
+
+function renderFantasy(f, stagesDoc) {
+  const dayCards = f.days.map(d => {
+    const st = stagesDoc.stages.find(s => s.n === d.stage);
+    const type = st ? st.type : d.type;
+    const picks = (d.picks || []).map(p => `
+      <li class="fpick">
+        <span class="fp-rider">${esc(p.rider)}</span>
+        <span class="fp-team">${esc(p.team || "")}</span>
+        <span class="fp-why">${esc(p.why || "")}</span>
+      </li>`).join("");
+    return `<div class="card fantasy-day">
+      <div class="stage-topline">
+        <span class="fd-num">Stage ${d.stage}</span>
+        <span class="badge ${esc(type)}">${TYPE_LABELS[type] || esc(type)}</span>
+        <span class="stage-date">${st ? fmtDate(st.date) : ""}</span>
+      </div>
+      ${st ? `<div class="fd-route">${esc(st.start)} → ${esc(st.finish)} · ${st.km} km · ${st.elevationM.toLocaleString()} m</div>` : ""}
+      <div class="fd-headline">${esc(d.headline || "")}</div>
+      <div class="fd-ridertype">🎯 Pick: <strong>${esc(d.riderType || "")}</strong></div>
+      ${picks ? `<ul class="fpicks">${picks}</ul>` : ""}
+    </div>`;
+  }).join("");
+
+  return `<h2 class="section">Fantasy Picks <em>next ${f.days.length} stages</em></h2>
+    <p class="fantasy-provenance">${
+      f.formThroughStage > 0
+        ? `Form analysis uses results up to <strong>Stage ${f.formThroughStage}</strong> only — nothing newer is revealed here.`
+        : `Based on pre-race form and the route — the race hadn't started when this was written.`
+    }</p>
+    ${dayCards}
+    ${f.strategy ? `<div class="card fantasy-strategy"><div class="fs-label">💡 Window strategy</div>${esc(f.strategy)}</div>` : ""}`;
 }
 
 function jerseyCard(cls, label, holder) {

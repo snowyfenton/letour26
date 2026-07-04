@@ -35,7 +35,7 @@ GitHub repo (letour26)                    here.now site (public)
 ├── scripts/publish.sh (copy of here.now helper)
 └── AGENT.md          (instructions the daily routine follows)
 
-Daily Claude cloud routine (13:00 AEST = 03:00 UTC, cron "0 3 * * *"):
+Daily Claude cloud routine (19:00 AEST = 09:00 UTC, cron "0 9 * * *"):
   clone repo → fetch PCS previous-stage pages via markdown.new →
   rewrite data.json → commit → publish site/ to here.now
 ```

@@ -1,0 +1,16 @@
+{
+  "updatedAt": "2026-07-04T06:00:00Z",
+  "standingsAfterStage": 0,
+  "nextStage": 1,
+  "restDay": false,
+  "note": "First stage — no standings yet. The first jerseys will be decided in today's team time trial in Barcelona.",
+  "jerseys": {
+    "yellow": null,
+    "green": null,
+    "polkaDot": null,
+    "white": null
+  },
+  "gcTop10": [],
+  "combativity": null,
+  "prevStageSummary": null
+}

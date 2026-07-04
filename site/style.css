@@ -1,0 +1,231 @@
+:root {
+  --bg: #14151a;
+  --card: #1e2028;
+  --card-2: #262935;
+  --text: #e8e9ed;
+  --muted: #9aa0ae;
+  --yellow: #ffd700;
+  --green: #46c46e;
+  --polka: #e05263;
+  --white-j: #f4f5f8;
+  --line: #33364a;
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+.masthead {
+  text-align: center;
+  padding: 28px 16px 10px;
+}
+.masthead h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.masthead .yr { color: var(--yellow); }
+.tagline { margin: 2px 0 0; color: var(--muted); font-size: 0.9rem; }
+.freshness { margin: 8px 0 0; font-size: 0.8rem; color: var(--muted); }
+.freshness strong { color: var(--yellow); font-weight: 600; }
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 12px 14px 40px;
+}
+
+.loading { text-align: center; color: var(--muted); padding: 40px 0; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin: 14px 0;
+}
+
+.rest-banner {
+  background: linear-gradient(135deg, #2a2d1f, #1e2028);
+  border: 1px solid var(--yellow);
+  text-align: center;
+}
+.rest-banner h2 { margin: 0 0 4px; color: var(--yellow); }
+.rest-banner p { margin: 0; color: var(--muted); }
+
+/* Stage header */
+.stage-head { padding: 20px 18px; }
+.stage-topline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.stage-num {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--yellow);
+  letter-spacing: 0.02em;
+}
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+.badge.flat     { background: #234; color: #7fd0ff; }
+.badge.hilly    { background: #2e2a1c; color: #ffce6b; }
+.badge.mountain { background: #3a2026; color: #ff8fa0; }
+.badge.ttt, .badge.itt { background: #232f3a; color: #9be8d8; }
+.stage-date { color: var(--muted); font-size: 0.9rem; }
+.stage-route {
+  font-size: 1.35rem;
+  font-weight: 650;
+  margin: 10px 0 4px;
+}
+.stage-route .arrow { color: var(--yellow); margin: 0 6px; }
+.stage-stats {
+  display: flex;
+  gap: 22px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.stat .v { font-size: 1.25rem; font-weight: 700; }
+.stat .k { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); }
+
+/* Images */
+.imgcard { padding: 10px; }
+.imgcard img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  background: #fff;
+}
+.imgcard figcaption {
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  padding: 8px 0 2px;
+}
+details.mapfold summary {
+  cursor: pointer;
+  color: var(--yellow);
+  font-weight: 600;
+  padding: 4px 8px;
+  list-style-position: inside;
+}
+
+/* Section titles */
+h2.section {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin: 26px 4px 8px;
+}
+h2.section em { color: var(--yellow); font-style: normal; }
+
+/* Jerseys */
+.jerseys {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+}
+.jersey {
+  border-radius: var(--radius);
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  border-top: 4px solid var(--line);
+}
+.jersey.yellow { border-top-color: var(--yellow); }
+.jersey.green  { border-top-color: var(--green); }
+.jersey.polka  { border-top-color: var(--polka); }
+.jersey.whitej { border-top-color: var(--white-j); }
+.jersey .jname {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.jersey .rider { font-weight: 700; font-size: 1.02rem; }
+.jersey .team { color: var(--muted); font-size: 0.85rem; }
+
+/* GC table */
+table.gc {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+table.gc td {
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--line);
+}
+table.gc tr:last-child td { border-bottom: none; }
+td.rank { color: var(--muted); width: 2em; text-align: right; }
+tr.leader td.name { color: var(--yellow); font-weight: 700; }
+td.name .team { display: block; color: var(--muted); font-size: 0.8rem; }
+td.gap { text-align: right; font-variant-numeric: tabular-nums; color: var(--text); white-space: nowrap; }
+
+/* Combativity */
+.combativity { display: flex; align-items: center; gap: 12px; }
+.combativity .medal { font-size: 1.8rem; }
+.combativity .rider { font-weight: 700; }
+.combativity .team, .combativity .ctx { color: var(--muted); font-size: 0.85rem; }
+
+/* Weather */
+.weather-now {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+.weather-now .icon { font-size: 2.4rem; }
+.weather-now .temp { font-size: 1.6rem; font-weight: 700; }
+.weather-now .desc { color: var(--muted); }
+.weather-hours {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(88px, 1fr));
+  gap: 8px;
+}
+.whour {
+  background: var(--card-2);
+  border-radius: 10px;
+  padding: 8px 6px;
+  text-align: center;
+  font-size: 0.85rem;
+}
+.whour .h { color: var(--muted); font-size: 0.75rem; }
+.whour .t { font-weight: 700; }
+.whour .p { color: #7fd0ff; font-size: 0.75rem; }
+.whour .w { color: var(--muted); font-size: 0.72rem; }
+.weather-note { color: var(--muted); font-size: 0.8rem; margin-top: 10px; }
+.weather-fail { color: var(--muted); }
+
+.note-card { color: var(--muted); font-style: italic; }
+
+footer {
+  text-align: center;
+  color: #5c6270;
+  font-size: 0.75rem;
+  padding: 20px 16px 34px;
+}
+footer p { margin: 4px 0; }
+
+@media (max-width: 480px) {
+  .masthead h1 { font-size: 1.6rem; }
+  .stage-route { font-size: 1.15rem; }
+  .stage-stats { gap: 16px; }
+}

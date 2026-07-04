@@ -1,0 +1,27 @@
+{
+  "race": "Tour de France 2026",
+  "restDays": ["2026-07-13", "2026-07-20"],
+  "stages": [
+    { "n": 1,  "date": "2026-07-04", "start": "Barcelona", "finish": "Barcelona", "km": 19.6,  "elevationM": 220,  "type": "ttt",      "finishLat": 41.3888, "finishLon": 2.1590 },
+    { "n": 2,  "date": "2026-07-05", "start": "Tarragona", "finish": "Barcelona", "km": 168.5, "elevationM": 2049, "type": "hilly",    "finishLat": 41.3888, "finishLon": 2.1590 },
+    { "n": 3,  "date": "2026-07-06", "start": "Granollers", "finish": "Les Angles", "km": 195.9, "elevationM": 3940, "type": "mountain", "finishLat": 42.5784, "finishLon": 2.0748 },
+    { "n": 4,  "date": "2026-07-07", "start": "Carcassonne", "finish": "Foix", "km": 181.9, "elevationM": 2784, "type": "hilly",    "finishLat": 42.9654, "finishLon": 1.6071 },
+    { "n": 5,  "date": "2026-07-08", "start": "Lannemezan", "finish": "Pau", "km": 158.3, "elevationM": 1395, "type": "flat",     "finishLat": 43.3112, "finishLon": -0.3558 },
+    { "n": 6,  "date": "2026-07-09", "start": "Pau", "finish": "Gavarnie-Gèdre", "km": 186.2, "elevationM": 4149, "type": "mountain", "finishLat": 42.7328, "finishLon": -0.0096 },
+    { "n": 7,  "date": "2026-07-10", "start": "Hagetmau", "finish": "Bordeaux", "km": 175.1, "elevationM": 701,  "type": "flat",     "finishLat": 44.8412, "finishLon": -0.5805 },
+    { "n": 8,  "date": "2026-07-11", "start": "Périgueux", "finish": "Bergerac", "km": 180.4, "elevationM": 1353, "type": "flat",     "finishLat": 44.8516, "finishLon": 0.4817 },
+    { "n": 9,  "date": "2026-07-12", "start": "Malemort", "finish": "Ussel", "km": 185.5, "elevationM": 3244, "type": "hilly",    "finishLat": 45.5480, "finishLon": 2.3092 },
+    { "n": 10, "date": "2026-07-14", "start": "Aurillac", "finish": "Le Lioran", "km": 166.6, "elevationM": 3791, "type": "mountain", "finishLat": 45.0888, "finishLon": 2.7475 },
+    { "n": 11, "date": "2026-07-15", "start": "Vichy", "finish": "Nevers", "km": 161.3, "elevationM": 1107, "type": "flat",     "finishLat": 46.9896, "finishLon": 3.1590 },
+    { "n": 12, "date": "2026-07-16", "start": "Circuit de Nevers Magny-Cours", "finish": "Chalon-sur-Saône", "km": 179.1, "elevationM": 1412, "type": "flat",     "finishLat": 46.7811, "finishLon": 4.8537 },
+    { "n": 13, "date": "2026-07-17", "start": "Dole", "finish": "Belfort", "km": 205.8, "elevationM": 2309, "type": "hilly",    "finishLat": 47.6422, "finishLon": 6.8539 },
+    { "n": 14, "date": "2026-07-18", "start": "Mulhouse", "finish": "Le Markstein Fellering", "km": 155.3, "elevationM": 3941, "type": "mountain", "finishLat": 47.9240, "finishLon": 7.0280 },
+    { "n": 15, "date": "2026-07-19", "start": "Champagnole", "finish": "Plateau de Solaison", "km": 183.9, "elevationM": 4098, "type": "mountain", "finishLat": 46.0339, "finishLon": 6.4279 },
+    { "n": 16, "date": "2026-07-21", "start": "Évian-les-Bains", "finish": "Thonon-les-Bains", "km": 26.1,  "elevationM": 470,  "type": "itt",      "finishLat": 46.3705, "finishLon": 6.4799 },
+    { "n": 17, "date": "2026-07-22", "start": "Chambéry", "finish": "Voiron", "km": 174.7, "elevationM": 2362, "type": "flat",     "finishLat": 45.3647, "finishLon": 5.5856 },
+    { "n": 18, "date": "2026-07-23", "start": "Voiron", "finish": "Orcières-Merlette", "km": 185.2, "elevationM": 3944, "type": "mountain", "finishLat": 44.6995, "finishLon": 6.3262 },
+    { "n": 19, "date": "2026-07-24", "start": "Gap", "finish": "Alpe d'Huez", "km": 127.9, "elevationM": 3572, "type": "mountain", "finishLat": 45.0909, "finishLon": 6.0706 },
+    { "n": 20, "date": "2026-07-25", "start": "Le Bourg-d'Oisans", "finish": "Alpe d'Huez", "km": 170.9, "elevationM": 5624, "type": "mountain", "finishLat": 45.0909, "finishLon": 6.0706 },
+    { "n": 21, "date": "2026-07-26", "start": "Thoiry", "finish": "Paris Champs-Élysées", "km": 133.0, "elevationM": 1295, "type": "flat",     "finishLat": 48.8534, "finishLon": 2.3488 }
+  ]
+}

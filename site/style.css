@@ -35,6 +35,7 @@ body {
 }
 .masthead .yr { color: var(--yellow); }
 .tagline { margin: 2px 0 0; color: var(--muted); font-size: 0.9rem; }
+.intro { margin: 10px auto 0; max-width: 640px; color: var(--muted); font-size: 0.85rem; line-height: 1.5; }
 .freshness { margin: 8px 0 0; font-size: 0.8rem; color: var(--muted); }
 .freshness strong { color: var(--yellow); font-weight: 600; }
 

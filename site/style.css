@@ -32,6 +32,17 @@ body {
   font-size: 2rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.masthead .avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 .masthead .yr { color: var(--yellow); }
 .tagline { margin: 2px 0 0; color: var(--muted); font-size: 0.9rem; }

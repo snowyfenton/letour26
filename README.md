@@ -8,7 +8,7 @@ close of the previous stage** — jerseys, GC top 10, and the combativity award.
 - **Site**: static HTML/CSS/JS in `site/`, hosted on here.now
 - **Static route data**: `site/stages.json` (all 21 stages, built once from letour.fr + procyclingstats)
 - **Daily standings**: `site/data.json`, rewritten and pushed to `main` each day at
-  13:00 UTC (23:00 AEST) by a scheduled Claude cloud routine following `AGENT.md`.
+  03:00 UTC (13:00 AEST) by a scheduled Claude cloud routine following `AGENT.md`.
   The live page fetches it from raw.githubusercontent.com, so a push is a deployment —
   the here.now shell only needs republishing when code or images change
 - **Weather**: fetched client-side from Open-Meteo at view time (inherently spoiler-free)

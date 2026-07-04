@@ -1,14 +1,14 @@
 :root {
-  --bg: #14151a;
-  --card: #1e2028;
-  --card-2: #262935;
-  --text: #e8e9ed;
-  --muted: #9aa0ae;
+  --bg: #0e0f11;
+  --card: #17181b;
+  --card-2: #1e1f23;
+  --text: #e6e7ea;
+  --muted: #8b8f98;
   --yellow: #ffd700;
   --green: #46c46e;
   --polka: #e05263;
   --white-j: #f4f5f8;
-  --line: #33364a;
+  --line: #232428;
   --radius: 14px;
 }
 
@@ -55,7 +55,7 @@ main {
 }
 
 .rest-banner {
-  background: linear-gradient(135deg, #2a2d1f, #1e2028);
+  background: linear-gradient(135deg, #232414, #17181b);
   border: 1px solid var(--yellow);
   text-align: center;
 }

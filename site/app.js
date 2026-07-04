@@ -35,11 +35,20 @@ async function main() {
   const app = document.getElementById("app");
   try {
     const bust = "?v=" + Date.now(); // never let a cached data.json show stale standings silently
-    const [stagesRes, dataRes] = await Promise.all([
-      fetch("stages.json" + bust), fetch("data.json" + bust),
-    ]);
-    const stagesDoc = await stagesRes.json();
-    const data = await dataRes.json();
+    // Standings are committed daily to GitHub by the update routine; the site shell on
+    // here.now is static. Fall back to the local (possibly stale) copy if GitHub is down.
+    const DATA_URL = "https://raw.githubusercontent.com/snowyfenton/letour26/main/site/data.json";
+    const stagesDoc = await (await fetch("stages.json" + bust)).json();
+    let data, stale = false;
+    try {
+      const res = await fetch(DATA_URL + bust, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      data = await res.json();
+    } catch (err) {
+      data = await (await fetch("data.json" + bust)).json();
+      stale = true;
+    }
+    data._stale = stale;
 
     const stage = stagesDoc.stages.find(s => s.n === data.nextStage) || stagesDoc.stages[0];
     render(app, stagesDoc, data, stage);
@@ -51,7 +60,11 @@ async function main() {
 
 function render(app, stagesDoc, data, stage) {
   const fresh = document.getElementById("freshness");
-  if (data.standingsAfterStage > 0) {
+  if (data._stale) {
+    fresh.innerHTML = `⚠️ Couldn't reach the standings snapshot — showing possibly out-of-date data`;
+    fresh.style.color = "#ff8fa0";
+    // continue rendering with the fallback copy
+  } else if (data.standingsAfterStage > 0) {
     fresh.innerHTML = `Standings frozen as at the end of <strong>Stage ${data.standingsAfterStage}</strong>`;
   } else {
     fresh.innerHTML = `Race not yet started — <strong>no standings yet</strong>`;

@@ -103,18 +103,17 @@ Rules:
 - On Jul 27 (final run): set `nextStage: 21`, `restDay: false`, and
   `note: "Race complete — final standings."`
 
-## Publish
+## Publish (keyless — via GitHub only)
 
-The here.now API key and site slug are provided in your task prompt (they are NOT in
-this repo — never commit them to it).
+The site shell is hosted on here.now, but it fetches `site/data.json` directly from
+this repo's `main` branch via raw.githubusercontent.com at view time. You do NOT
+publish to here.now and you need NO credentials beyond your GitHub access.
 
 1. Write the new `site/data.json`.
 2. Validate it is parseable JSON and `standingsAfterStage` == N.
-3. Publish the `site/` directory to the existing here.now site:
-   run `bash scripts/publish.sh site --slug <SLUG> --api-key <API_KEY> --client claude-code-routine`
-   (script requires `curl`, `file`, `jq`)
-4. Confirm the publish output reports success and the final URL.
-5. Commit the updated `site/data.json` to the repo with message `data: standings after stage N` and push.
+3. Commit ONLY `site/data.json` with message `data: standings after stage N`.
+4. Push to `main`. The push IS the deployment — once it's on main, the site serves it.
+5. If the push fails, retry once; if it still fails, stop and report the error.
 
 ## Weather
 

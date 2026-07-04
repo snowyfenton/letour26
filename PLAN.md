@@ -74,7 +74,7 @@ The daily agent stamps `nextStage` in `data.json` (last completed stage + 1, ski
 
 ### Phase 2 — here.now publish
 
-7. Get a permanent here.now API key: request one-time code to nathan@enferrunning.com.au, Nathan pastes it, save key to `~/.herenow/credentials`
+7. Get a permanent here.now API key: request one-time sign-in code by email, Nathan pastes it, save key to `~/.herenow/credentials`
 8. Publish `site/` via `scripts/publish.sh`, confirm URL
 
 ### Phase 3 — GitHub + daily routine

@@ -39,6 +39,7 @@ async function main() {
     // here.now is static. Fall back to the local (possibly stale) copy if GitHub is down.
     const DATA_URL = "https://raw.githubusercontent.com/snowyfenton/letour26/main/site/data.json";
     const stagesDoc = await (await fetch("stages.json" + bust)).json();
+    const factsDoc = await (await fetch("facts.json" + bust)).json();
     let data, stale = false;
     try {
       const res = await fetch(DATA_URL + bust, { cache: "no-store" });
@@ -51,14 +52,14 @@ async function main() {
     data._stale = stale;
 
     const stage = stagesDoc.stages.find(s => s.n === data.nextStage) || stagesDoc.stages[0];
-    render(app, stagesDoc, data, stage);
+    render(app, stagesDoc, data, stage, factsDoc);
     loadWeather(stage);
   } catch (e) {
     app.innerHTML = `<div class="card">Couldn't load stage data (${esc(e.message)}). Try refreshing.</div>`;
   }
 }
 
-function render(app, stagesDoc, data, stage) {
+function render(app, stagesDoc, data, stage, factsDoc) {
   const fresh = document.getElementById("freshness");
   if (data._stale) {
     fresh.innerHTML = `⚠️ Couldn't reach the standings snapshot — showing possibly out-of-date data`;
@@ -107,6 +108,16 @@ function render(app, stagesDoc, data, stage) {
   // Weather placeholder — filled async
   parts.push(`<h2 class="section">Weather in ${esc(stage.finish)}</h2>
     <div class="card" id="weather"><span class="weather-fail">Loading forecast…</span></div>`);
+
+  const factEntry = factsDoc && Array.isArray(factsDoc.facts)
+    ? factsDoc.facts.find(f => f.stage === stage.n)
+    : null;
+  if (factEntry) {
+    parts.push(`<div class="card history-card">
+      <span class="medal">🏛️</span>
+      <span>${esc(factEntry.fact)}</span>
+    </div>`);
+  }
 
   // Standings
   if (data.standingsAfterStage > 0) {

@@ -178,6 +178,10 @@ td.gap { text-align: right; font-variant-numeric: tabular-nums; color: var(--tex
 .combativity .rider { font-weight: 700; }
 .combativity .team, .combativity .ctx { color: var(--muted); font-size: 0.85rem; }
 
+/* Tour history fact */
+.history-card { display: flex; align-items: flex-start; gap: 12px; font-size: 0.92rem; color: var(--text); }
+.history-card .medal { font-size: 1.5rem; line-height: 1.3; }
+
 /* Weather */
 .weather-now {
   display: flex;

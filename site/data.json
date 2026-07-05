@@ -1,16 +1,27 @@
 {
-  "updatedAt": "2026-07-04T10:30:00Z",
-  "standingsAfterStage": 0,
-  "nextStage": 1,
+  "updatedAt": "2026-07-05T09:45:00Z",
+  "standingsAfterStage": 1,
+  "nextStage": 2,
   "restDay": false,
-  "note": "First stage — no standings yet. The first jerseys will be decided in today's team time trial in Barcelona.",
+  "note": null,
   "jerseys": {
-    "yellow": null,
-    "green": null,
-    "polkaDot": null,
-    "white": null
+    "yellow":   { "rider": "Jonas Vingegaard", "team": "Team Visma | Lease a Bike" },
+    "green":    { "rider": "Egan Bernal", "team": "Netcompany INEOS" },
+    "polkaDot": { "rider": "Tadej Pogačar", "team": "UAE Team Emirates - XRG" },
+    "white":    { "rider": "Juan Ayuso", "team": "Lidl - Trek" }
   },
-  "gcTop10": [],
+  "gcTop10": [
+    { "rank": 1, "rider": "Jonas Vingegaard", "team": "Team Visma | Lease a Bike", "gap": "" },
+    { "rank": 2, "rider": "Filippo Ganna", "team": "Netcompany INEOS", "gap": "+ 0:08" },
+    { "rank": 3, "rider": "Tadej Pogačar", "team": "UAE Team Emirates - XRG", "gap": "+ 0:12" },
+    { "rank": 4, "rider": "Juan Ayuso", "team": "Lidl - Trek", "gap": "+ 0:16" },
+    { "rank": 5, "rider": "Remco Evenepoel", "team": "Red Bull - BORA - hansgrohe", "gap": "+ 0:19" },
+    { "rank": 6, "rider": "Isaac del Toro", "team": "UAE Team Emirates - XRG", "gap": "+ 0:26" },
+    { "rank": 7, "rider": "Davide Piganzoli", "team": "Team Visma | Lease a Bike", "gap": "+ 0:28" },
+    { "rank": 8, "rider": "Tobias Foss", "team": "Netcompany INEOS", "gap": "+ 0:35" },
+    { "rank": 9, "rider": "Florian Lipowitz", "team": "Red Bull - BORA - hansgrohe", "gap": "+ 0:38" },
+    { "rank": 10, "rider": "Paul Seixas", "team": "Decathlon CMA CGM Team", "gap": "+ 0:39" }
+  ],
   "combativity": null,
   "prevStageSummary": null,
   "fantasy": {
@@ -21,7 +32,7 @@
         "headline": "Punchy Barcelona finale — too hard for the pure sprinters, perfect for fast classics riders.",
         "riderType": "Puncheur",
         "picks": [
-          { "rider": "Mathieu van der Poel", "team": "Alpecin - Premier Tech", "why": "Short, sharp finishing climbs are exactly his terrain, and he'll be targeting an early yellow jersey." },
+          { "rider": "Mathieu van der Poel", "team": "Alpecin - Premier Tech", "why": "Short, sharp finishing climbs are exactly his terrain." },
           { "rider": "Mads Pedersen", "team": "Lidl - Trek", "why": "Fast enough to win a reduced sprint if the puncheurs' attacks are pulled back." },
           { "rider": "Julian Alaphilippe", "team": "Tudor Pro Cycling", "why": "Cheaper than the stars and this is the kind of stage he lives for." }
         ]

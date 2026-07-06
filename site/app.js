@@ -89,7 +89,7 @@ function render(app, stagesDoc, data, stage, factsDoc) {
     </div>
     <div class="stage-route">${esc(stage.start)}<span class="arrow">→</span>${esc(stage.finish)}</div>
     <div class="stage-stats">
-      <div class="stat"><div class="v">${stage.km} km</div><div class="k">Distance</div></div>
+      <div class="stat"><div class="v">${Number(stage.km)} km</div><div class="k">Distance</div></div>
       <div class="stat"><div class="v">${stage.elevationM.toLocaleString()} m</div><div class="k">Elevation gain</div></div>
     </div>
   </div>`);
@@ -236,8 +236,10 @@ function jerseyCard(cls, label, holder) {
 async function loadWeather(stage) {
   const el = document.getElementById("weather");
   try {
+    const lat = Number(stage.finishLat), lon = Number(stage.finishLon);
+    if (!Number.isFinite(lat) || !Number.isFinite(lon)) throw new Error("no finish coordinates");
     const url = "https://api.open-meteo.com/v1/forecast"
-      + `?latitude=${stage.finishLat}&longitude=${stage.finishLon}`
+      + `?latitude=${lat}&longitude=${lon}`
       + "&hourly=temperature_2m,precipitation_probability,precipitation,wind_speed_10m,wind_gusts_10m,weather_code"
       + "&timezone=Europe%2FParis&past_days=2&forecast_days=7";
     const res = await fetch(url);

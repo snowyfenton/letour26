@@ -77,6 +77,20 @@ Let N = target stage. Fetch these URLs (prepend `https://markdown.new/`):
 - If the jerseys aren't clear from the stage page, also fetch `.../stage-N-points`, `.../stage-N-kom`, `.../stage-N-youth`
 - Combativity award for stage N: fetch `https://markdown.new/https://www.letour.fr/en/rankings` ONLY IF it can be scoped to stage N; otherwise use a web search for "Tour de France 2026 stage N combativity award" and use only results clearly about stage N. (TTT and ITT stages have no combativity award — use null.)
 
+### Betting odds for the next stage
+
+Run `python scripts/fetch-odds.py <nextStage>` and put its output in `odds` in data.json.
+The script fetches the Oddschecker stage-winner market directly (browser UA via curl —
+NOT via markdown.new; Oddschecker blocks non-browser TLS fingerprints, which is also why
+the script shells out to curl instead of using urllib).
+
+- Spoiler safety: the URL is pinned to `nextStage` and the script reads only the odds
+  table markup — never read or quote anything else from that page.
+- If the script prints `null` (market not up yet, page blocked, parse failure), set
+  `odds: null` and carry on — a missing odds card must NEVER block or delay the publish.
+- Do not edit the script's output beyond pasting it in; the site hides the card unless
+  `odds.stage === nextStage`, so never fudge the stage number.
+
 ## Output format — site/data.json
 
 ```json
@@ -98,6 +112,14 @@ Let N = target stage. Fetch these URLs (prepend `https://markdown.new/`):
   ],
   "combativity": { "rider": "...", "team": "...", "stage": N },
   "prevStageSummary": null,
+  "odds": {
+    "stage": <N+1 — must equal nextStage>,
+    "fetchedAt": "<ISO timestamp from the script>",
+    "source": "Oddschecker — market median across K bookmakers",
+    "riders": [
+      { "rider": "First Last", "median": 2.75, "best": 3.35 }
+    ]
+  },
   "fantasy": {
     "formThroughStage": <N-1>,
     "days": [
@@ -178,4 +200,5 @@ would require baking weather into data.json and a client change. Not your job to
 - [ ] gcTop10 has exactly 10 entries
 - [ ] `fantasy.formThroughStage` == N-1 and no fantasy text mentions anything from stage N or later
 - [ ] No fantasy pick is a rider who has left the race (and no text says anyone left)
+- [ ] `odds` is either null or has `stage` == nextStage with riders straight from fetch-odds.py
 - [ ] JSON is valid

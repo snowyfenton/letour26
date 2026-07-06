@@ -24,6 +24,53 @@
   ],
   "combativity": null,
   "prevStageSummary": null,
+  "odds": {
+    "stage": 3,
+    "fetchedAt": "2026-07-06T06:16:12Z",
+    "source": "Oddschecker — market median across 17 bookmakers",
+    "riders": [
+      {
+        "rider": "Tadej Pogačar",
+        "median": 2.75,
+        "best": 3.35
+      },
+      {
+        "rider": "Mathieu van der Poel",
+        "median": 13.0,
+        "best": 18.1
+      },
+      {
+        "rider": "Mathias Vacek",
+        "median": 14.0,
+        "best": 17.7
+      },
+      {
+        "rider": "Romain Gregoire",
+        "median": 17.0,
+        "best": 21.0
+      },
+      {
+        "rider": "Isaac del Toro",
+        "median": 21.0,
+        "best": 27.0
+      },
+      {
+        "rider": "Ben Healy",
+        "median": 26.0,
+        "best": 26.0
+      },
+      {
+        "rider": "Quinn Simmons",
+        "median": 26.0,
+        "best": 31.0
+      },
+      {
+        "rider": "Luke Plapp",
+        "median": 26.0,
+        "best": 34.0
+      }
+    ]
+  },
   "fantasy": {
     "formThroughStage": 0,
     "days": [

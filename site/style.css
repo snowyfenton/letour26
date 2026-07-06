@@ -183,6 +183,17 @@ tr.leader td.name { color: var(--yellow); font-weight: 700; }
 td.name .team { display: block; color: var(--muted); font-size: 0.8rem; }
 td.gap { text-align: right; font-variant-numeric: tabular-nums; color: var(--text); white-space: nowrap; }
 
+/* Odds */
+table.odds tr.odds-head td {
+  color: var(--muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-bottom: 4px;
+}
+table.odds td.odds-best { color: var(--yellow); width: 5em; }
+table.odds td.gap { width: 5em; }
+
 /* Combativity */
 .combativity { display: flex; align-items: center; gap: 12px; }
 .combativity .medal { font-size: 1.8rem; }

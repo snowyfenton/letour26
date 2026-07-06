@@ -119,6 +119,13 @@ function render(app, stagesDoc, data, stage, factsDoc) {
     </div>`);
   }
 
+  // Stage-winner odds for the upcoming stage. odds.stage must match nextStage so a
+  // stale or early-seeded snapshot is hidden rather than shown against the wrong stage.
+  if (data.odds && data.odds.stage === data.nextStage
+      && Array.isArray(data.odds.riders) && data.odds.riders.length) {
+    parts.push(renderOdds(data.odds));
+  }
+
   // Standings
   if (data.standingsAfterStage > 0) {
     parts.push(`<h2 class="section">Jerseys <em>after Stage ${data.standingsAfterStage}</em></h2>`);
@@ -163,6 +170,24 @@ function render(app, stagesDoc, data, stage, factsDoc) {
   }
 
   app.innerHTML = parts.join("");
+}
+
+function renderOdds(odds) {
+  const fetched = new Date(odds.fetchedAt).toLocaleString("en-AU", {
+    weekday: "short", hour: "numeric", minute: "2-digit",
+    timeZone: "Australia/Melbourne", hour12: true,
+  });
+  return `<h2 class="section">Stage ${odds.stage} Odds <em>to win · decimal</em></h2>
+    <div class="card"><table class="gc odds">
+      <tr class="odds-head"><td></td><td class="gap">Market</td><td class="gap">Best</td></tr>
+      ${odds.riders.map(r => `
+      <tr>
+        <td class="name">${esc(r.rider)}</td>
+        <td class="gap">${r.median.toFixed(2)}</td>
+        <td class="gap odds-best">${r.best.toFixed(2)}</td>
+      </tr>`).join("")}
+    </table></div>
+    <p class="fantasy-provenance">${esc(odds.source || "")} — snapshot ${esc(fetched)} AEST. Odds are about the stage ahead only; they reveal nothing about results.</p>`;
 }
 
 function renderFantasy(f, stagesDoc) {

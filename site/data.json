@@ -1,38 +1,104 @@
 {
-  "updatedAt": "2026-07-05T09:45:00Z",
-  "standingsAfterStage": 1,
-  "nextStage": 2,
+  "updatedAt": "2026-07-06T06:45:58Z",
+  "standingsAfterStage": 2,
+  "nextStage": 3,
   "restDay": false,
   "note": null,
   "jerseys": {
-    "yellow":   { "rider": "Jonas Vingegaard", "team": "Team Visma | Lease a Bike" },
-    "green":    { "rider": "Egan Bernal", "team": "Netcompany INEOS" },
-    "polkaDot": { "rider": "Tadej Pogačar", "team": "UAE Team Emirates - XRG" },
-    "white":    { "rider": "Juan Ayuso", "team": "Lidl - Trek" }
+    "yellow": {
+      "rider": "Jonas Vingegaard",
+      "team": "Team Visma | Lease a Bike"
+    },
+    "green": {
+      "rider": "Isaac del Toro",
+      "team": "UAE Team Emirates - XRG"
+    },
+    "polkaDot": {
+      "rider": "Alex Molenaar",
+      "team": "Caja Rural - Seguros RGA"
+    },
+    "white": {
+      "rider": "Isaac del Toro",
+      "team": "UAE Team Emirates - XRG"
+    }
   },
   "gcTop10": [
-    { "rank": 1, "rider": "Jonas Vingegaard", "team": "Team Visma | Lease a Bike", "gap": "" },
-    { "rank": 2, "rider": "Filippo Ganna", "team": "Netcompany INEOS", "gap": "+ 0:08" },
-    { "rank": 3, "rider": "Tadej Pogačar", "team": "UAE Team Emirates - XRG", "gap": "+ 0:12" },
-    { "rank": 4, "rider": "Juan Ayuso", "team": "Lidl - Trek", "gap": "+ 0:16" },
-    { "rank": 5, "rider": "Remco Evenepoel", "team": "Red Bull - BORA - hansgrohe", "gap": "+ 0:19" },
-    { "rank": 6, "rider": "Isaac del Toro", "team": "UAE Team Emirates - XRG", "gap": "+ 0:26" },
-    { "rank": 7, "rider": "Davide Piganzoli", "team": "Team Visma | Lease a Bike", "gap": "+ 0:28" },
-    { "rank": 8, "rider": "Tobias Foss", "team": "Netcompany INEOS", "gap": "+ 0:35" },
-    { "rank": 9, "rider": "Florian Lipowitz", "team": "Red Bull - BORA - hansgrohe", "gap": "+ 0:38" },
-    { "rank": 10, "rider": "Paul Seixas", "team": "Decathlon CMA CGM Team", "gap": "+ 0:39" }
+    {
+      "rank": 1,
+      "rider": "Jonas Vingegaard",
+      "team": "Team Visma | Lease a Bike",
+      "gap": ""
+    },
+    {
+      "rank": 2,
+      "rider": "Tadej Pogačar",
+      "team": "UAE Team Emirates - XRG",
+      "gap": "+ 0:06"
+    },
+    {
+      "rank": 3,
+      "rider": "Remco Evenepoel",
+      "team": "Red Bull - BORA - hansgrohe",
+      "gap": "+ 0:15"
+    },
+    {
+      "rank": 4,
+      "rider": "Isaac del Toro",
+      "team": "UAE Team Emirates - XRG",
+      "gap": "+ 0:16"
+    },
+    {
+      "rank": 5,
+      "rider": "Juan Ayuso",
+      "team": "Lidl - Trek",
+      "gap": "+ 0:19"
+    },
+    {
+      "rank": 6,
+      "rider": "Paul Seixas",
+      "team": "Decathlon CMA CGM Team",
+      "gap": "+ 0:42"
+    },
+    {
+      "rank": 7,
+      "rider": "Romain Grégoire",
+      "team": "Groupama - FDJ United",
+      "gap": "+ 0:44"
+    },
+    {
+      "rank": 8,
+      "rider": "Lenny Martinez",
+      "team": "Bahrain - Victorious",
+      "gap": "+ 0:45"
+    },
+    {
+      "rank": 9,
+      "rider": "Florian Lipowitz",
+      "team": "Red Bull - BORA - hansgrohe",
+      "gap": "+ 0:53"
+    },
+    {
+      "rank": 10,
+      "rider": "Tom Pidcock",
+      "team": "Pinarello Q36.5 Pro Cycling Team",
+      "gap": "+ 1:00"
+    }
   ],
-  "combativity": null,
+  "combativity": {
+    "rider": "Felix Engelhardt",
+    "team": "Team Jayco AlUla",
+    "stage": 2
+  },
   "prevStageSummary": null,
   "odds": {
     "stage": 3,
-    "fetchedAt": "2026-07-06T06:16:12Z",
+    "fetchedAt": "2026-07-06T06:44:42Z",
     "source": "Oddschecker — market median across 17 bookmakers",
     "riders": [
       {
         "rider": "Tadej Pogačar",
         "median": 2.75,
-        "best": 3.35
+        "best": 3.01
       },
       {
         "rider": "Mathieu van der Poel",
@@ -41,7 +107,7 @@
       },
       {
         "rider": "Mathias Vacek",
-        "median": 14.0,
+        "median": 15.0,
         "best": 17.7
       },
       {
@@ -55,43 +121,45 @@
         "best": 27.0
       },
       {
+        "rider": "Remco Evenepoel",
+        "median": 21.0,
+        "best": 34.0
+      },
+      {
         "rider": "Ben Healy",
         "median": 26.0,
-        "best": 26.0
+        "best": 29.0
       },
       {
         "rider": "Quinn Simmons",
-        "median": 26.0,
+        "median": 29.0,
         "best": 31.0
-      },
-      {
-        "rider": "Luke Plapp",
-        "median": 26.0,
-        "best": 34.0
       }
     ]
   },
   "fantasy": {
-    "formThroughStage": 0,
+    "formThroughStage": 1,
     "days": [
       {
-        "stage": 2,
-        "headline": "Punchy Barcelona finale — too hard for the pure sprinters, perfect for fast classics riders.",
-        "riderType": "Puncheur",
-        "picks": [
-          { "rider": "Mathieu van der Poel", "team": "Alpecin - Premier Tech", "why": "Short, sharp finishing climbs are exactly his terrain." },
-          { "rider": "Mads Pedersen", "team": "Lidl - Trek", "why": "Fast enough to win a reduced sprint if the puncheurs' attacks are pulled back." },
-          { "rider": "Julian Alaphilippe", "team": "Tudor Pro Cycling", "why": "Cheaper than the stars and this is the kind of stage he lives for." }
-        ]
-      },
-      {
         "stage": 3,
-        "headline": "First summit finish at Les Angles (3,940 m of climbing) — the GC race starts today.",
+        "headline": "First summit finish at Les Angles (3,940 m of climbing) — the GC riders take over.",
         "riderType": "GC leader / Climber",
         "picks": [
-          { "rider": "Tadej Pogačar", "team": "UAE Team Emirates - XRG", "why": "The default pick for any summit finish; also likely to be chasing every time bonus." },
-          { "rider": "Jonas Vingegaard", "team": "Team Visma | Lease a Bike", "why": "The other podium favourite — top-5 stage points are close to guaranteed on this terrain." },
-          { "rider": "Florian Lipowitz", "team": "Red Bull - BORA - hansgrohe", "why": "Value climber pick — free role if Evenepoel marks the favourites." }
+          {
+            "rider": "Tadej Pogačar",
+            "team": "UAE Team Emirates - XRG",
+            "why": "The default pick for any summit finish, and he'll be hunting every bonus second."
+          },
+          {
+            "rider": "Jonas Vingegaard",
+            "team": "Team Visma | Lease a Bike",
+            "why": "Visma's stage 1 TTT win showed the team is sharp — top-5 stage points are near guaranteed on this terrain."
+          },
+          {
+            "rider": "Florian Lipowitz",
+            "team": "Red Bull - BORA - hansgrohe",
+            "why": "Value climber pick with a free role if Evenepoel marks the favourites."
+          }
         ]
       },
       {
@@ -99,19 +167,43 @@
         "headline": "Rolling Ariège roads to Foix the day after a summit finish — classic breakaway territory.",
         "riderType": "Breakaway specialist",
         "picks": [
-          { "rider": "Julian Alaphilippe", "team": "Tudor Pro Cycling", "why": "Wildcard-team riders have to hunt stages like this one." },
-          { "rider": "Guillaume Martin", "team": "Groupama - FDJ United", "why": "Climbs well enough to survive the Pyrenean foothills and often rides ahead of the GC group." },
-          { "rider": "Michael Valgren", "team": "EF Education - EasyPost", "why": "Cheap engine for a big escape day — EF always races aggressively." }
+          {
+            "rider": "Julian Alaphilippe",
+            "team": "Tudor Pro Cycling",
+            "why": "Wildcard-team riders have to hunt stages like this one."
+          },
+          {
+            "rider": "Guillaume Martin",
+            "team": "Groupama - FDJ United",
+            "why": "Climbs well enough to survive the Pyrenean foothills and often rides ahead of the GC group."
+          },
+          {
+            "rider": "Michael Valgren",
+            "team": "EF Education - EasyPost",
+            "why": "Cheap engine for a big escape day — EF always races aggressively."
+          }
         ]
       },
       {
         "stage": 5,
-        "headline": "Flat run into Pau — the sprinters' first clear chance in days, so their teams will control it.",
+        "headline": "Flat run into Pau — the sprinters' first clear chance, so their teams will control it.",
         "riderType": "Sprinter",
         "picks": [
-          { "rider": "Tim Merlier", "team": "Soudal Quick-Step", "why": "Arguably the fastest man in the race on a straightforward finish." },
-          { "rider": "Jasper Philipsen", "team": "Alpecin - Premier Tech", "why": "Best leadout in the peloton and scores consistently even when he doesn't win." },
-          { "rider": "Biniam Girmay", "team": "NSN Cycling Team", "why": "Podium-regular sprinter who also survives harder finishes — great points-per-euro." }
+          {
+            "rider": "Tim Merlier",
+            "team": "Soudal Quick-Step",
+            "why": "Arguably the fastest man in the race on a straightforward finish."
+          },
+          {
+            "rider": "Jasper Philipsen",
+            "team": "Alpecin - Premier Tech",
+            "why": "Best leadout in the peloton and scores consistently even when he doesn't win."
+          },
+          {
+            "rider": "Biniam Girmay",
+            "team": "NSN Cycling Team",
+            "why": "Podium-regular sprinter who also survives harder finishes — great points-per-euro."
+          }
         ]
       },
       {
@@ -119,9 +211,21 @@
         "headline": "The queen Pyrenean stage to Gavarnie-Gèdre — 4,149 m of climbing, biggest points day of the window.",
         "riderType": "GC leader / Climber",
         "picks": [
-          { "rider": "Jonas Vingegaard", "team": "Team Visma | Lease a Bike", "why": "Long, high mountain days are where he's historically strongest." },
-          { "rider": "Tadej Pogačar", "team": "UAE Team Emirates - XRG", "why": "If the race is close after Les Angles he'll attack here." },
-          { "rider": "Richard Carapaz", "team": "EF Education - EasyPost", "why": "Likely to hunt the breakaway and mountain points if he's lost time on GC." }
+          {
+            "rider": "Jonas Vingegaard",
+            "team": "Team Visma | Lease a Bike",
+            "why": "Long, high mountain days are where he's historically strongest."
+          },
+          {
+            "rider": "Tadej Pogačar",
+            "team": "UAE Team Emirates - XRG",
+            "why": "If the yellow jersey is still in reach he'll attack here."
+          },
+          {
+            "rider": "Richard Carapaz",
+            "team": "EF Education - EasyPost",
+            "why": "Likely to hunt the breakaway and mountain points if he's out of the GC picture."
+          }
         ]
       },
       {
@@ -129,12 +233,46 @@
         "headline": "Pan-flat run to Bordeaux (only 701 m of climbing all day) — a nailed-on bunch sprint.",
         "riderType": "Sprinter",
         "picks": [
-          { "rider": "Tim Merlier", "team": "Soudal Quick-Step", "why": "The most conventional sprint finish of the week suits him perfectly." },
-          { "rider": "Jasper Philipsen", "team": "Alpecin - Premier Tech", "why": "Bordeaux's long finishing straights reward a big leadout train." },
-          { "rider": "Mads Pedersen", "team": "Lidl - Trek", "why": "Reliable top-5 sprinter who keeps scoring on days the pure flyers fade." }
+          {
+            "rider": "Tim Merlier",
+            "team": "Soudal Quick-Step",
+            "why": "The most conventional sprint finish of the week suits him perfectly."
+          },
+          {
+            "rider": "Jasper Philipsen",
+            "team": "Alpecin - Premier Tech",
+            "why": "Bordeaux's long finishing straights reward a big leadout train."
+          },
+          {
+            "rider": "Mads Pedersen",
+            "team": "Lidl - Trek",
+            "why": "Reliable top-5 sprinter who keeps scoring on days the pure flyers fade."
+          }
+        ]
+      },
+      {
+        "stage": 8,
+        "headline": "Périgueux to Bergerac is gently rolling (1,353 m) — sprint day, but a late escape isn't impossible.",
+        "riderType": "Sprinter",
+        "picks": [
+          {
+            "rider": "Jasper Philipsen",
+            "team": "Alpecin - Premier Tech",
+            "why": "Back-to-back sprint chances reward keeping him through the weekend."
+          },
+          {
+            "rider": "Mads Pedersen",
+            "team": "Lidl - Trek",
+            "why": "Strong enough to score even if the run-in turns scrappy."
+          },
+          {
+            "rider": "Biniam Girmay",
+            "team": "NSN Cycling Team",
+            "why": "Consistent top-5 threat and cheaper than the two marquee sprinters."
+          }
         ]
       }
     ],
-    "strategy": "This first transfer window (stages 1-7) is bookended by two serious Pyrenean summit finishes with sprint chances in between, so a balanced squad beats a specialist one: two or three sprinters earn their keep on stages 5 and 7, but make sure both marquee GC riders are aboard before stage 3. Remember climbing stages outscore sprint stages in this competition, so if you're picking a bonus (double-points) stage early, stage 6 is the biggest single pot of the week — take it if your team is climber-heavy, or bank a safer double on stage 7's near-certain bunch sprint if you're sprinter-stacked. Spend the transfer window's final moves converting a sprinter into a climber before the window shuts after stage 7."
+    "strategy": "The stage 1-7 transfer window closes after Bordeaux, and it ends with the two biggest climbing days of the opening week (stages 3 and 6) wrapped around two likely bunch sprints (5 and 7) — so hold both marquee GC riders through the Pyrenees and make sure two sprinters are aboard by stage 5. Climbing stages outscore sprint stages, so if you're playing the double-points bonus early, stage 6 to Gavarnie-Gèdre is the biggest pot on offer; stage 7's near-certain sprint is the safe alternative if your squad is sprinter-heavy. Save a transfer or two for the end of the window: stage 8 opens the next third with another sprint chance, so a cheap third sprinter converts well there."
   }
 }

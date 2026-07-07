@@ -99,6 +99,13 @@ Let N = target stage. Fetch these URLs (prepend `https://markdown.new/`):
 - `https://www.procyclingstats.com/race/tour-de-france/2026/stage-N` — stage result + jersey holders after stage N (PCS stage pages show GC/points/KOM/youth leaders after that stage)
 - `https://www.procyclingstats.com/race/tour-de-france/2026/stage-N-gc` — GC standing after stage N (top 10 with gaps)
 - If the jerseys aren't clear from the stage page, also fetch `.../stage-N-points`, `.../stage-N-kom`, `.../stage-N-youth`
+- Abandons: the stage-N result page also lists riders who left the race that stage
+  (rows marked DNF / DNS / OTL / DSQ instead of a rank). Extract rider, team, and the
+  marker for any such rows — no other text from those rows, and never a reason or
+  narrative. Append them to the previous data.json's `abandons.riders` (keep earlier
+  stages' entries as-is; the list is cumulative across the race) and set
+  `abandons.throughStage` to N. If the previous data.json has no `abandons` object,
+  rebuild it from the DNF/DNS/OTL/DSQ rows of every stage page ≤ N.
 - Combativity award for stage N: fetch `https://markdown.new/https://www.letour.fr/en/rankings` ONLY IF it can be scoped to stage N; otherwise use a web search for "Tour de France 2026 stage N combativity award" and use only results clearly about stage N. (TTT and ITT stages have no combativity award — use null.)
 
 ### Betting odds for the next stage
@@ -136,6 +143,12 @@ the script shells out to curl instead of using urllib).
   ],
   "combativity": { "rider": "...", "team": "...", "stage": N },
   "prevStageSummary": null,
+  "abandons": {
+    "throughStage": N,
+    "riders": [
+      { "rider": "First Last", "team": "Team", "how": "DNS", "stage": 2 }
+    ]
+  },
   "odds": {
     "stage": <N+1 — must equal nextStage>,
     "fetchedAt": "<ISO timestamp from the script>",
@@ -167,6 +180,10 @@ Rules:
   shows the *wearer on the road* — prefer PCS's listed classification leader, not wearer.
   Report the actual classification leader for each jersey.
 - `combativity` is null if not awarded or not confidently found.
+- `abandons.riders` entries carry only rider, team, `how` (DNF | DNS | OTL | DSQ), and
+  the stage number — never a cause, injury detail, or any other text. `riders: []` is
+  valid (nobody out yet). If the DNF section of a stage page can't be read confidently,
+  keep the previous `abandons` object unchanged rather than guessing.
 - On Jul 27 (final run): set `nextStage: 21`, `restDay: false`, and
   `note: "Race complete — final standings."`
 
@@ -224,5 +241,6 @@ would require baking weather into data.json and a client change. Not your job to
 - [ ] gcTop10 has exactly 10 entries
 - [ ] `fantasy.formThroughStage` == N-1 and no fantasy text mentions anything from stage N or later
 - [ ] No fantasy pick is a rider who has left the race (and no text says anyone left)
+- [ ] `abandons.throughStage` == N and every entry's `stage` is ≤ N
 - [ ] `odds` is either null or has `stage` == nextStage with riders straight from fetch-odds.py
 - [ ] JSON is valid

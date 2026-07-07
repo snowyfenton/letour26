@@ -90,6 +90,17 @@
     "stage": 2
   },
   "prevStageSummary": null,
+  "abandons": {
+    "throughStage": 2,
+    "riders": [
+      {
+        "rider": "Clément Berthet",
+        "team": "Groupama - FDJ United",
+        "how": "DNS",
+        "stage": 2
+      }
+    ]
+  },
   "odds": {
     "stage": 3,
     "fetchedAt": "2026-07-06T06:44:42Z",

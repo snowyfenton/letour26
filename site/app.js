@@ -73,6 +73,8 @@ function render(app, stagesDoc, data, stage, factsDoc) {
 
   const parts = [];
 
+  parts.push(renderStrip(stagesDoc, data));
+
   if (data.restDay) {
     parts.push(`<div class="card rest-banner">
       <h2>Rest day</h2>
@@ -146,6 +148,10 @@ function render(app, stagesDoc, data, stage, factsDoc) {
         </tr>`).join("")}</table></div>`);
     }
 
+    if (data.abandons && Array.isArray(data.abandons.riders)) {
+      parts.push(renderAbandons(data.abandons));
+    }
+
     if (data.combativity && data.combativity.rider) {
       parts.push(`<h2 class="section">Most Combative <em>Stage ${data.combativity.stage || data.standingsAfterStage}</em></h2>`);
       parts.push(`<div class="card combativity">
@@ -170,6 +176,47 @@ function render(app, stagesDoc, data, stage, factsDoc) {
   }
 
   app.innerHTML = parts.join("");
+}
+
+function renderStrip(stagesDoc, data) {
+  const TYPE_SHORT = { flat: "Flat", hilly: "Hilly", mountain: "Mtn", ttt: "TTT", itt: "ITT" };
+  const items = [
+    ...stagesDoc.stages.map(s => ({ date: s.date, s })),
+    ...(stagesDoc.restDays || []).map(d => ({ date: d, rest: true })),
+  ].sort((a, b) => (a.date < b.date ? -1 : 1));
+
+  const cells = items.map(it => {
+    if (it.rest) {
+      return `<div class="ts-cell rest" title="Rest day — ${esc(fmtDate(it.date))}">
+        <div class="ts-n">☕</div><div class="ts-type">Rest</div>
+      </div>`;
+    }
+    const s = it.s;
+    const state = s.n <= data.standingsAfterStage ? "watched"
+      : s.n === data.nextStage ? "next" : "future";
+    const title = `Stage ${s.n} · ${TYPE_LABELS[s.type] || s.type} · ${s.start} → ${s.finish} · ${fmtDate(s.date)}`;
+    return `<div class="ts-cell ${esc(s.type)} ${state}" title="${esc(title)}">
+      <div class="ts-n">${s.n}</div><div class="ts-type">${TYPE_SHORT[s.type] || esc(s.type)}</div>
+    </div>`;
+  }).join("");
+
+  return `<div class="card strip-card">
+    <div class="tour-strip">${cells}</div>
+    <p class="strip-legend">Dimmed = watched · <span class="lg-next">outlined</span> = up next · Mtn = Mountain · TTT/ITT = Time Trial</p>
+  </div>`;
+}
+
+function renderAbandons(ab) {
+  const head = `<h2 class="section">No longer in the race <em>through Stage ${Number(ab.throughStage) || "?"}</em></h2>`;
+  if (!ab.riders.length) {
+    return head + `<div class="card note-card">Every rider who started is still in the race.</div>`;
+  }
+  return head + `<div class="card"><table class="gc abandons">${ab.riders.map(r => `
+    <tr>
+      <td class="name">${esc(r.rider)}<span class="team">${esc(r.team || "")}</span></td>
+      <td class="gap abandon-how">${esc(r.how || "")}</td>
+      <td class="gap">Stage ${Number(r.stage) || "?"}</td>
+    </tr>`).join("")}</table></div>`;
 }
 
 function renderOdds(odds) {

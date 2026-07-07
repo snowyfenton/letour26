@@ -74,6 +74,51 @@ main {
 .rest-banner h2 { margin: 0 0 4px; color: var(--yellow); }
 .rest-banner p { margin: 0; color: var(--muted); }
 
+/* Tour overview strip */
+.strip-card { padding: 12px 12px 8px; }
+.tour-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(46px, 1fr));
+  gap: 5px;
+}
+.ts-cell {
+  background: var(--card-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  text-align: center;
+  padding: 5px 2px 4px;
+}
+.ts-n { font-weight: 800; font-size: 0.9rem; line-height: 1.2; }
+.ts-type {
+  font-size: 0.58rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+.ts-cell.flat     .ts-type { color: #7fd0ff; }
+.ts-cell.hilly    .ts-type { color: #ffce6b; }
+.ts-cell.mountain .ts-type { color: #ff8fa0; }
+.ts-cell.ttt .ts-type, .ts-cell.itt .ts-type { color: #9be8d8; }
+.ts-cell.rest { border-style: dashed; }
+.ts-cell.rest .ts-n { font-size: 0.8rem; }
+.ts-cell.watched { opacity: 0.35; }
+.ts-cell.next {
+  border-color: var(--yellow);
+  box-shadow: 0 0 0 1px var(--yellow);
+}
+.ts-cell.next .ts-n { color: var(--yellow); }
+.strip-legend {
+  color: var(--muted);
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 8px 2px 2px;
+}
+.strip-legend .lg-next { color: var(--yellow); }
+
+/* Abandons */
+table.abandons td.abandon-how { color: var(--muted); width: 4em; }
+
 /* Stage header */
 .stage-head { padding: 20px 18px; }
 .stage-topline {

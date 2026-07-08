@@ -1,6 +1,7 @@
 /* Le Tour 26 — spoiler-safe stage companion.
    The ONLY network calls here are to local JSON files and Open-Meteo (weather).
-   No race data is ever fetched live — standings come frozen in data.json. */
+   No race data is ever fetched live — standings come frozen in data.json.
+   Views: home ("today") and per-stage detail via hash routing (#stage/N). */
 
 const TYPE_LABELS = {
   flat: "Flat", hilly: "Hilly", mountain: "Mountain",
@@ -31,6 +32,8 @@ function fmtDate(iso) {
 
 function pad2(n) { return String(n).padStart(2, "0"); }
 
+let ctx = null; // { stagesDoc, factsDoc, data } — loaded once, then routed on hashchange
+
 async function main() {
   const app = document.getElementById("app");
   try {
@@ -51,15 +54,36 @@ async function main() {
     }
     data._stale = stale;
 
-    const stage = stagesDoc.stages.find(s => s.n === data.nextStage) || stagesDoc.stages[0];
-    render(app, stagesDoc, data, stage, factsDoc);
-    loadWeather(stage);
+    ctx = { stagesDoc, factsDoc, data };
+    window.addEventListener("hashchange", route);
+    route();
   } catch (e) {
     app.innerHTML = `<div class="card">Couldn't load stage data (${esc(e.message)}). Try refreshing.</div>`;
   }
 }
 
-function render(app, stagesDoc, data, stage, factsDoc) {
+function route() {
+  if (!ctx) return;
+  const app = document.getElementById("app");
+  const { stagesDoc, factsDoc, data } = ctx;
+
+  renderFreshness(data);
+
+  const m = location.hash.match(/^#stage\/(\d{1,2})$/);
+  const detailStage = m ? stagesDoc.stages.find(s => s.n === Number(m[1])) : null;
+
+  if (detailStage) {
+    renderStageDetail(app, stagesDoc, data, detailStage, factsDoc);
+    loadWeather(detailStage);
+  } else {
+    const stage = stagesDoc.stages.find(s => s.n === data.nextStage) || stagesDoc.stages[0];
+    renderHome(app, stagesDoc, data, stage, factsDoc);
+    loadWeather(stage);
+  }
+  window.scrollTo(0, 0);
+}
+
+function renderFreshness(data) {
   const fresh = document.getElementById("freshness");
   if (data._stale) {
     fresh.innerHTML = `⚠️ Couldn't reach the standings snapshot — showing possibly out-of-date data`;
@@ -70,20 +94,12 @@ function render(app, stagesDoc, data, stage, factsDoc) {
   } else {
     fresh.innerHTML = `Race not yet started — <strong>no standings yet</strong>`;
   }
+}
 
-  const parts = [];
+/* ---------- Shared stage renderers (used by home + detail views) ---------- */
 
-  parts.push(renderStrip(stagesDoc, data));
-
-  if (data.restDay) {
-    parts.push(`<div class="card rest-banner">
-      <h2>Rest day</h2>
-      <p>No stage today. Next up: Stage ${stage.n} on ${fmtDate(stage.date)}.</p>
-    </div>`);
-  }
-
-  const nn = pad2(stage.n);
-  parts.push(`<div class="card stage-head">
+function stageHeadCard(stage) {
+  return `<div class="card stage-head">
     <div class="stage-topline">
       <span class="stage-num">Stage ${stage.n}</span>
       <span class="badge ${esc(stage.type)}">${TYPE_LABELS[stage.type] || esc(stage.type)}</span>
@@ -94,32 +110,64 @@ function render(app, stagesDoc, data, stage, factsDoc) {
       <div class="stat"><div class="v">${Number(stage.km)} km</div><div class="k">Distance</div></div>
       <div class="stat"><div class="v">${stage.elevationM.toLocaleString()} m</div><div class="k">Elevation gain</div></div>
     </div>
-  </div>`);
+  </div>`;
+}
 
-  parts.push(`<figure class="card imgcard">
+function stageImages(stage) {
+  const nn = pad2(stage.n);
+  return `<figure class="card imgcard">
     <img src="img/stage-${nn}-profile.jpg" alt="Stage ${stage.n} profile" loading="lazy"
          onerror="this.closest('figure').style.display='none'">
     <figcaption>Official stage profile — letour.fr</figcaption>
-  </figure>`);
-
-  parts.push(`<figure class="card imgcard">
+  </figure>
+  <figure class="card imgcard">
     <img src="img/stage-${nn}-map.jpg" alt="Stage ${stage.n} route map" loading="lazy"
          onerror="this.closest('figure').style.display='none'">
-  </figure>`);
+  </figure>`;
+}
 
-  // Weather placeholder — filled async
-  parts.push(`<h2 class="section">Weather in ${esc(stage.finish)}</h2>
-    <div class="card" id="weather"><span class="weather-fail">Loading forecast…</span></div>`);
+function weatherSection(stage) {
+  return `<h2 class="section">Weather in ${esc(stage.finish)}</h2>
+    <div class="card" id="weather"><span class="weather-fail">Loading forecast…</span></div>`;
+}
 
+function historyFactCard(stage, factsDoc) {
   const factEntry = factsDoc && Array.isArray(factsDoc.facts)
     ? factsDoc.facts.find(f => f.stage === stage.n)
     : null;
-  if (factEntry) {
-    parts.push(`<div class="card history-card">
-      <span class="medal">🏛️</span>
-      <span>${esc(factEntry.fact)}</span>
+  if (!factEntry) return "";
+  return `<div class="card history-card">
+    <span class="medal">🏛️</span>
+    <span>${esc(factEntry.fact)}</span>
+  </div>`;
+}
+
+function expectCard(stage) {
+  if (!stage.expect) return "";
+  return `<div class="card history-card expect-card">
+    <span class="medal">🔭</span>
+    <span><strong class="expect-label">What to expect</strong>${esc(stage.expect)}</span>
+  </div>`;
+}
+
+/* ---------- Home ("today") view ---------- */
+
+function renderHome(app, stagesDoc, data, stage, factsDoc) {
+  const parts = [];
+
+  parts.push(renderStrip(stagesDoc, data, null));
+
+  if (data.restDay) {
+    parts.push(`<div class="card rest-banner">
+      <h2>Rest day</h2>
+      <p>No stage today. Next up: Stage ${stage.n} on ${fmtDate(stage.date)}.</p>
     </div>`);
   }
+
+  parts.push(stageHeadCard(stage));
+  parts.push(stageImages(stage));
+  parts.push(weatherSection(stage));
+  parts.push(historyFactCard(stage, factsDoc));
 
   // Stage-winner odds for the upcoming stage. odds.stage must match nextStage so a
   // stale or early-seeded snapshot is hidden rather than shown against the wrong stage.
@@ -178,7 +226,65 @@ function render(app, stagesDoc, data, stage, factsDoc) {
   app.innerHTML = parts.join("");
 }
 
-function renderStrip(stagesDoc, data) {
+/* ---------- Per-stage detail view ---------- */
+
+function countdownLine(stage, data) {
+  if (stage.n <= data.standingsAfterStage) {
+    return `<p class="countdown watched-line">✅ Watched — standings on the home page include this stage.</p>`;
+  }
+  // "Today" means today in France, where the stage actually runs.
+  const todayParis = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Paris" });
+  const days = Math.round((Date.parse(stage.date) - Date.parse(todayParis)) / 86400000);
+  let label;
+  if (days <= 0) label = "🚴 Racing today (French time) — results stay hidden until you've watched.";
+  else if (days === 1) label = "🗓️ Racing tomorrow";
+  else label = `🗓️ Racing in ${days} days`;
+  return `<p class="countdown">${label}</p>`;
+}
+
+function renderStageDetail(app, stagesDoc, data, stage, factsDoc) {
+  const parts = [];
+
+  parts.push(renderStrip(stagesDoc, data, stage.n));
+
+  const prev = stagesDoc.stages.find(s => s.n === stage.n - 1);
+  const next = stagesDoc.stages.find(s => s.n === stage.n + 1);
+  parts.push(`<div class="stage-nav">
+    <a class="sn-back" href="#">← Back to today</a>
+    <span class="sn-pn">
+      ${prev ? `<a href="#stage/${prev.n}">← Stage ${prev.n}</a>` : ""}
+      ${next ? `<a href="#stage/${next.n}">Stage ${next.n} →</a>` : ""}
+    </span>
+  </div>`);
+
+  parts.push(countdownLine(stage, data));
+  parts.push(stageHeadCard(stage));
+  parts.push(expectCard(stage));
+  parts.push(stageImages(stage));
+  parts.push(weatherSection(stage));
+  parts.push(historyFactCard(stage, factsDoc));
+
+  // Fantasy pick for this stage, if it's inside the published picks window.
+  // No standings/jerseys/GC/odds here — those stay on the home page only.
+  if (data.fantasy && Array.isArray(data.fantasy.days)) {
+    const day = data.fantasy.days.find(d => d.stage === stage.n);
+    if (day) {
+      parts.push(`<h2 class="section">Fantasy Pick <em>Stage ${stage.n}</em></h2>`);
+      parts.push(fantasyDayCard(day, stagesDoc));
+      parts.push(`<p class="fantasy-provenance">${
+        data.fantasy.formThroughStage > 0
+          ? `Form analysis uses results up to <strong>Stage ${data.fantasy.formThroughStage}</strong> only — nothing newer is revealed here.`
+          : `Based on pre-race form and the route — the race hadn't started when this was written.`
+      }</p>`);
+    }
+  }
+
+  app.innerHTML = parts.join("");
+}
+
+/* ---------- Tour strip ---------- */
+
+function renderStrip(stagesDoc, data, currentN) {
   const TYPE_SHORT = { flat: "Flat", hilly: "Hilly", mountain: "Mtn", ttt: "TTT", itt: "ITT" };
   const items = [
     ...stagesDoc.stages.map(s => ({ date: s.date, s })),
@@ -194,15 +300,16 @@ function renderStrip(stagesDoc, data) {
     const s = it.s;
     const state = s.n <= data.standingsAfterStage ? "watched"
       : s.n === data.nextStage ? "next" : "future";
+    const current = s.n === currentN ? " current" : "";
     const title = `Stage ${s.n} · ${TYPE_LABELS[s.type] || s.type} · ${s.start} → ${s.finish} · ${fmtDate(s.date)}`;
-    return `<div class="ts-cell ${esc(s.type)} ${state}" title="${esc(title)}">
+    return `<a class="ts-cell ${esc(s.type)} ${state}${current}" href="#stage/${s.n}" title="${esc(title)}">
       <div class="ts-n">${s.n}</div><div class="ts-type">${TYPE_SHORT[s.type] || esc(s.type)}</div>
-    </div>`;
+    </a>`;
   }).join("");
 
   return `<div class="card strip-card">
     <div class="tour-strip">${cells}</div>
-    <p class="strip-legend">Dimmed = watched · <span class="lg-next">outlined</span> = up next · Mtn = Mountain · TTT/ITT = Time Trial</p>
+    <p class="strip-legend">Tap a stage for its route, map &amp; forecast · Dimmed = watched · <span class="lg-next">outlined</span> = up next · Mtn = Mountain · TTT/ITT = Time Trial</p>
   </div>`;
 }
 
@@ -237,28 +344,30 @@ function renderOdds(odds) {
     <p class="fantasy-provenance">${esc(odds.source || "")} — snapshot ${esc(fetched)} AEST. Odds are about the stage ahead only; they reveal nothing about results.</p>`;
 }
 
+function fantasyDayCard(d, stagesDoc) {
+  const st = stagesDoc.stages.find(s => s.n === d.stage);
+  const type = st ? st.type : d.type;
+  const picks = (d.picks || []).map(p => `
+    <li class="fpick">
+      <span class="fp-rider">${esc(p.rider)}</span>
+      <span class="fp-team">${esc(p.team || "")}</span>
+      <span class="fp-why">${esc(p.why || "")}</span>
+    </li>`).join("");
+  return `<div class="card fantasy-day">
+    <div class="stage-topline">
+      <span class="fd-num">Stage ${d.stage}</span>
+      <span class="badge ${esc(type)}">${TYPE_LABELS[type] || esc(type)}</span>
+      <span class="stage-date">${st ? fmtDate(st.date) : ""}</span>
+    </div>
+    ${st ? `<div class="fd-route">${esc(st.start)} → ${esc(st.finish)} · ${st.km} km · ${st.elevationM.toLocaleString()} m</div>` : ""}
+    <div class="fd-headline">${esc(d.headline || "")}</div>
+    <div class="fd-ridertype">🎯 Pick: <strong>${esc(d.riderType || "")}</strong></div>
+    ${picks ? `<ul class="fpicks">${picks}</ul>` : ""}
+  </div>`;
+}
+
 function renderFantasy(f, stagesDoc) {
-  const dayCards = f.days.map(d => {
-    const st = stagesDoc.stages.find(s => s.n === d.stage);
-    const type = st ? st.type : d.type;
-    const picks = (d.picks || []).map(p => `
-      <li class="fpick">
-        <span class="fp-rider">${esc(p.rider)}</span>
-        <span class="fp-team">${esc(p.team || "")}</span>
-        <span class="fp-why">${esc(p.why || "")}</span>
-      </li>`).join("");
-    return `<div class="card fantasy-day">
-      <div class="stage-topline">
-        <span class="fd-num">Stage ${d.stage}</span>
-        <span class="badge ${esc(type)}">${TYPE_LABELS[type] || esc(type)}</span>
-        <span class="stage-date">${st ? fmtDate(st.date) : ""}</span>
-      </div>
-      ${st ? `<div class="fd-route">${esc(st.start)} → ${esc(st.finish)} · ${st.km} km · ${st.elevationM.toLocaleString()} m</div>` : ""}
-      <div class="fd-headline">${esc(d.headline || "")}</div>
-      <div class="fd-ridertype">🎯 Pick: <strong>${esc(d.riderType || "")}</strong></div>
-      ${picks ? `<ul class="fpicks">${picks}</ul>` : ""}
-    </div>`;
-  }).join("");
+  const dayCards = f.days.map(d => fantasyDayCard(d, stagesDoc)).join("");
 
   return `<h2 class="section">Fantasy Picks <em>next ${f.days.length} stages</em></h2>
     <p class="fantasy-provenance">${
@@ -288,7 +397,7 @@ async function loadWeather(stage) {
     const url = "https://api.open-meteo.com/v1/forecast"
       + `?latitude=${lat}&longitude=${lon}`
       + "&hourly=temperature_2m,precipitation_probability,precipitation,wind_speed_10m,wind_gusts_10m,weather_code"
-      + "&timezone=Europe%2FParis&past_days=2&forecast_days=7";
+      + "&timezone=Europe%2FParis&past_days=2&forecast_days=16";
     const res = await fetch(url);
     const wx = await res.json();
 
@@ -297,7 +406,13 @@ async function loadWeather(stage) {
     const idx = hours
       .map(h => wx.hourly.time.indexOf(`${stage.date}T${pad2(h)}:00`))
       .filter(i => i >= 0);
-    if (!idx.length) throw new Error("stage date outside forecast range");
+    if (!idx.length) {
+      const todayParis = new Date().toLocaleDateString("en-CA", { timeZone: "Europe/Paris" });
+      el.innerHTML = stage.date < todayParis
+        ? `<span class="weather-fail">This stage has already run — nothing to forecast.</span>`
+        : `<span class="weather-fail">📅 Forecast opens about 16 days before the stage — check back closer to ${esc(fmtDate(stage.date))}.</span>`;
+      return;
+    }
 
     const mid = idx[Math.floor(idx.length / 2)];
     const [icon, desc] = WMO[wx.hourly.weather_code[mid]] || ["🌡️", "—"];

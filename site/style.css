@@ -102,7 +102,23 @@ main {
 .ts-cell.ttt .ts-type, .ts-cell.itt .ts-type { color: #9be8d8; }
 .ts-cell.rest { border-style: dashed; }
 .ts-cell.rest .ts-n { font-size: 0.8rem; }
+a.ts-cell {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.08s ease, border-color 0.08s ease;
+}
+a.ts-cell:hover {
+  transform: translateY(-1px);
+  border-color: var(--muted);
+}
+.ts-cell.current {
+  border-color: var(--text);
+  box-shadow: 0 0 0 1px var(--text);
+}
 .ts-cell.watched { opacity: 0.35; }
+a.ts-cell.watched:hover { opacity: 0.7; }
 .ts-cell.next {
   border-color: var(--yellow);
   box-shadow: 0 0 0 1px var(--yellow);
@@ -115,6 +131,39 @@ main {
   margin: 8px 2px 2px;
 }
 .strip-legend .lg-next { color: var(--yellow); }
+
+/* Stage detail navigation */
+.stage-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 2px 0;
+  font-size: 0.9rem;
+}
+.stage-nav a {
+  color: var(--yellow);
+  text-decoration: none;
+  font-weight: 600;
+}
+.stage-nav a:hover { text-decoration: underline; }
+.stage-nav .sn-pn { display: flex; gap: 16px; }
+.stage-nav .sn-pn a { color: var(--muted); }
+.countdown {
+  margin: 10px 4px 0;
+  font-size: 0.9rem;
+  color: var(--yellow);
+  font-weight: 600;
+}
+.countdown.watched-line { color: var(--muted); font-weight: 400; }
+.expect-card .expect-label {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--yellow);
+  margin-bottom: 4px;
+}
 
 /* Abandons */
 table.abandons td.abandon-how { color: var(--muted); width: 4em; }

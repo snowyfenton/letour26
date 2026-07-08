@@ -165,6 +165,7 @@ function renderHome(app, stagesDoc, data, stage, factsDoc) {
   }
 
   parts.push(stageHeadCard(stage));
+  parts.push(expectCard(stage));
   parts.push(stageImages(stage));
   parts.push(weatherSection(stage));
   parts.push(historyFactCard(stage, factsDoc));

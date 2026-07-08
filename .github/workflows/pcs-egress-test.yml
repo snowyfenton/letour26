@@ -1,0 +1,11 @@
+name: PCS egress test (temporary)
+on: workflow_dispatch
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch stage-3 page via fetch-pcs.py
+        run: |
+          python scripts/fetch-pcs.py stage-3 > /tmp/out.txt && echo "OK bytes=$(wc -c < /tmp/out.txt)"

@@ -1,93 +1,93 @@
 {
-  "updatedAt": "2026-07-08T03:45:00Z",
-  "standingsAfterStage": 3,
-  "nextStage": 4,
+  "updatedAt": "2026-07-08T09:00:48Z",
+  "standingsAfterStage": 4,
+  "nextStage": 5,
   "restDay": false,
   "note": null,
   "jerseys": {
     "yellow": {
-      "rider": "Tadej Pogačar",
-      "team": "UAE Team Emirates - XRG"
+      "rider": "Torstein Træen",
+      "team": "Uno-X Mobility"
     },
     "green": {
-      "rider": "Tadej Pogačar",
-      "team": "UAE Team Emirates - XRG"
+      "rider": "Mads Pedersen",
+      "team": "Lidl - Trek"
     },
     "polkaDot": {
       "rider": "Alex Baudin",
       "team": "EF Education - EasyPost"
     },
     "white": {
-      "rider": "Isaac del Toro",
-      "team": "UAE Team Emirates - XRG"
+      "rider": "Mathias Vacek",
+      "team": "Lidl - Trek"
     }
   },
   "gcTop10": [
     {
       "rank": 1,
-      "rider": "Tadej Pogačar",
-      "team": "UAE Team Emirates - XRG",
+      "rider": "Torstein Træen",
+      "team": "Uno-X Mobility",
       "gap": ""
     },
     {
       "rank": 2,
-      "rider": "Jonas Vingegaard",
-      "team": "Team Visma | Lease a Bike",
-      "gap": "+ 0:00"
+      "rider": "Sean Quinn",
+      "team": "EF Education - EasyPost",
+      "gap": "+ 0:28"
     },
     {
       "rank": 3,
-      "rider": "Remco Evenepoel",
-      "team": "Red Bull - BORA - hansgrohe",
-      "gap": "+ 0:23"
+      "rider": "Mathias Vacek",
+      "team": "Lidl - Trek",
+      "gap": "+ 3:50"
     },
     {
       "rank": 4,
-      "rider": "Isaac del Toro",
+      "rider": "Tadej Pogačar",
       "team": "UAE Team Emirates - XRG",
-      "gap": "+ 0:24"
+      "gap": "+ 7:53"
     },
     {
       "rank": 5,
-      "rider": "Juan Ayuso",
-      "team": "Lidl - Trek",
-      "gap": "+ 0:27"
+      "rider": "Jonas Vingegaard",
+      "team": "Team Visma | Lease a Bike",
+      "gap": "+ 7:53"
     },
     {
       "rank": 6,
-      "rider": "Florian Lipowitz",
-      "team": "Red Bull - BORA - hansgrohe",
-      "gap": "+ 0:48"
+      "rider": "Ramses Debruyne",
+      "team": "Alpecin - Premier Tech",
+      "gap": "+ 8:06"
     },
     {
       "rank": 7,
-      "rider": "Paul Seixas",
-      "team": "Decathlon CMA CGM Team",
-      "gap": "+ 0:53"
+      "rider": "Remco Evenepoel",
+      "team": "Red Bull - BORA - hansgrohe",
+      "gap": "+ 8:16"
     },
     {
       "rank": 8,
-      "rider": "Lenny Martinez",
-      "team": "Bahrain - Victorious",
-      "gap": "+ 1:09"
+      "rider": "Juan Ayuso",
+      "team": "Lidl - Trek",
+      "gap": "+ 8:17"
     },
     {
       "rank": 9,
-      "rider": "Tobias Halland Johannessen",
-      "team": "Uno-X Mobility",
-      "gap": "+ 1:11"
+      "rider": "Isaac del Toro",
+      "team": "UAE Team Emirates - XRG",
+      "gap": "+ 8:20"
     },
     {
       "rank": 10,
-      "rider": "Ilan Van Wilder",
-      "team": "Soudal Quick-Step",
-      "gap": "+ 1:17"
+      "rider": "Paul Seixas",
+      "team": "Decathlon CMA CGM Team",
+      "gap": "+ 8:41"
     }
   ],
   "combativity": null,
   "prevStageSummary": null,
   "abandons": {
-    "throughStage": 3,
+    "throughStage": 4,
     "riders": [
       {
         "rider": "Clément Berthet",
@@ -100,49 +100,33 @@
         "team": "Lotto Intermarché",
         "how": "DNF",
         "stage": 3
+      },
+      {
+        "rider": "Kelland O'Brien",
+        "team": "Team Jayco AlUla",
+        "how": "OTL",
+        "stage": 4
       }
     ]
   },
   "odds": null,
   "fantasy": {
-    "formThroughStage": 2,
+    "formThroughStage": 3,
     "days": [
       {
-        "stage": 4,
-        "headline": "Rolling Ariège roads to Foix the day after a summit finish — classic breakaway territory.",
-        "riderType": "Breakaway specialist",
-        "picks": [
-          {
-            "rider": "Julian Alaphilippe",
-            "team": "Tudor Pro Cycling",
-            "why": "Wildcard-team riders have to hunt stages like this one."
-          },
-          {
-            "rider": "Guillaume Martin",
-            "team": "Groupama - FDJ United",
-            "why": "Climbs well enough to survive the Pyrenean foothills and often rides ahead of the GC group."
-          },
-          {
-            "rider": "Michael Valgren",
-            "team": "EF Education - EasyPost",
-            "why": "Cheap engine for a big escape day — EF always races aggressively."
-          }
-        ]
-      },
-      {
         "stage": 5,
-        "headline": "Flat run into Pau — the sprinters' first clear chance, so their teams will control it.",
+        "headline": "First truly flat run of the race into Pau — the sprinters' first clean chance, so their teams should control it.",
         "riderType": "Sprinter",
         "picks": [
           {
             "rider": "Tim Merlier",
             "team": "Soudal Quick-Step",
-            "why": "Arguably the fastest man in the race on a straightforward finish."
+            "why": "Arguably the fastest man in the race on a straightforward finish, and yet to get a clean flat stage."
           },
           {
             "rider": "Jasper Philipsen",
             "team": "Alpecin - Premier Tech",
-            "why": "Best leadout in the peloton and scores consistently even when he doesn't win."
+            "why": "Best leadout train in the peloton, built for exactly this kind of finish."
           },
           {
             "rider": "Biniam Girmay",
@@ -153,18 +137,18 @@
       },
       {
         "stage": 6,
-        "headline": "The queen Pyrenean stage to Gavarnie-Gèdre — 4,149 m of climbing, biggest points day of the window.",
+        "headline": "The first true summit-finish showdown in the high Pyrenees, to Gavarnie-Gèdre — 4,149 m of climbing, the biggest points day of the window.",
         "riderType": "GC leader / Climber",
         "picks": [
           {
             "rider": "Jonas Vingegaard",
             "team": "Team Visma | Lease a Bike",
-            "why": "Long, high mountain days are where he's historically strongest, and the TTT showed Visma arrived sharp."
+            "why": "Shares the overall lead through stage 3, and long high-mountain days are historically where he's strongest."
           },
           {
             "rider": "Tadej Pogačar",
             "team": "UAE Team Emirates - XRG",
-            "why": "The default pick for any big summit day — he'll be hunting bonus seconds and stage points."
+            "why": "Co-leader through stage 3 and the default pick for any big summit day — he'll be hunting bonus seconds and stage points."
           },
           {
             "rider": "Richard Carapaz",
@@ -229,8 +213,8 @@
           },
           {
             "rider": "Kévin Vauquelin",
-            "team": "Arkéa - B&B Hotels",
-            "why": "French puncheur who thrives on repeated short climbs and hunts breakaways on home roads."
+            "team": "Netcompany INEOS",
+            "why": "Thrives on repeated short climbs and hunts breakaways when the terrain gets choppy."
           },
           {
             "rider": "Ben Healy",

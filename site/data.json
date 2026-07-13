@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-07-12T09:07:48Z",
-  "standingsAfterStage": 8,
-  "nextStage": 9,
-  "restDay": false,
+  "updatedAt": "2026-07-13T09:05:03Z",
+  "standingsAfterStage": 9,
+  "nextStage": 10,
+  "restDay": true,
   "note": null,
   "jerseys": {
     "yellow": {
@@ -55,39 +55,39 @@
     },
     {
       "rank": 6,
-      "rider": "Florian Lipowitz",
-      "team": "Red Bull - BORA - hansgrohe",
+      "rider": "Paul Seixas",
+      "team": "Decathlon CMA CGM Team",
       "gap": "+ 3:55"
     },
     {
       "rank": 7,
-      "rider": "Paul Seixas",
-      "team": "Decathlon CMA CGM Team",
+      "rider": "Florian Lipowitz",
+      "team": "Red Bull - BORA - hansgrohe",
       "gap": "+ 4:00"
     },
     {
       "rank": 8,
-      "rider": "Lenny Martinez",
-      "team": "Bahrain - Victorious",
+      "rider": "Mattias Skjelmose",
+      "team": "Lidl - Trek",
       "gap": "+ 4:21"
     },
     {
       "rank": 9,
-      "rider": "Mattias Skjelmose",
-      "team": "Lidl - Trek",
+      "rider": "Lenny Martinez",
+      "team": "Bahrain - Victorious",
       "gap": "+ 4:57"
     },
     {
       "rank": 10,
-      "rider": "Mathias Vacek",
-      "team": "Lidl - Trek",
-      "gap": "+ 7:10"
+      "rider": "Egan Bernal",
+      "team": "Netcompany INEOS",
+      "gap": "+ 9:12"
     }
   ],
   "combativity": null,
   "prevStageSummary": null,
   "abandons": {
-    "throughStage": 8,
+    "throughStage": 9,
     "riders": [
       {
         "rider": "Clément Berthet",
@@ -141,30 +141,8 @@
   },
   "odds": null,
   "fantasy": {
-    "formThroughStage": 7,
+    "formThroughStage": 8,
     "days": [
-      {
-        "stage": 9,
-        "headline": "Malemort to Ussel packs 3,244 m of Massif Central chop with no summit finish, right on the eve of the rest day — prime breakaway territory.",
-        "riderType": "Breakaway specialist",
-        "picks": [
-          {
-            "rider": "Lenny Martinez",
-            "team": "Bahrain - Victorious",
-            "why": "Climbed strongly through the Pyrenean queen stage and profiles perfectly for a day like this without GC pressure."
-          },
-          {
-            "rider": "Anthony Turgis",
-            "team": "TotalEnergies",
-            "why": "A proven puncheur who thrives whenever a strong break is allowed to fight it out for the win."
-          },
-          {
-            "rider": "Kévin Vauquelin",
-            "team": "Netcompany INEOS",
-            "why": "French climber with a taste for aggressive racing on rolling, uncategorised terrain like this."
-          }
-        ]
-      },
       {
         "stage": 10,
         "headline": "First stage back after the rest day, Aurillac to Le Lioran — steep, irregular Cantal climbs that suit an ambush more than a set-piece mountain train.",
@@ -195,17 +173,17 @@
           {
             "rider": "Tim Merlier",
             "team": "Soudal Quick-Step",
-            "why": "Won the Bordeaux sprint and is the man to beat whenever the race comes back together in a straight fight."
+            "why": "Backed up his Bordeaux win with another sprint victory in Bergerac — the man to beat in a straight fight."
           },
           {
             "rider": "Biniam Girmay",
             "team": "NSN Cycling Team",
-            "why": "Podiumed behind Merlier in Bordeaux and has the top-end speed to go one better."
+            "why": "Runner-up in Bergerac and consistently the closest challenger when the sprint stays together."
           },
           {
-            "rider": "Søren Wærenskjold",
-            "team": "Uno-X Mobility",
-            "why": "Runner-up in Bordeaux and in career-best sprint form."
+            "rider": "Jasper Philipsen",
+            "team": "Alpecin - Premier Tech",
+            "why": "Podiumed again in Bergerac and has the leadout support to contest a short, controlled sprint stage."
           }
         ]
       },
@@ -217,17 +195,17 @@
           {
             "rider": "Tim Merlier",
             "team": "Soudal Quick-Step",
-            "why": "The in-form sprinter of the race; only a split bunch would seriously trouble him."
+            "why": "The in-form sprinter of the race with back-to-back stage wins; only a split bunch would seriously trouble him."
           },
           {
-            "rider": "Jasper Philipsen",
-            "team": "Alpecin - Premier Tech",
-            "why": "Consistently in the mix in the bunch sprints and dangerous if the wind picks up and echelons form."
+            "rider": "Olav Kooij",
+            "team": "Decathlon CMA CGM Team",
+            "why": "Third in Bergerac and building form; dangerous if the sprint comes down to a pure drag race."
           },
           {
             "rider": "Biniam Girmay",
             "team": "NSN Cycling Team",
-            "why": "Well-drilled leadout that holds up in a straight fight to the line."
+            "why": "Well-drilled leadout that holds up in a straight fight to the line and copes well if crosswinds cause splits."
           }
         ]
       },
@@ -252,8 +230,30 @@
             "why": "A classics powerhouse capable of forcing the winning move on a long, punchy stage."
           }
         ]
+      },
+      {
+        "stage": 14,
+        "headline": "A Vosges classic into Le Markstein Fellering — short but relentlessly climb-dense, the kind of day where a GC team can set a trap.",
+        "riderType": "Climber",
+        "picks": [
+          {
+            "rider": "Tadej Pogačar",
+            "team": "UAE Team Emirates - XRG",
+            "why": "Leads the race comfortably and has shown no weakness on any climb so far — the rider most able to press an advantage."
+          },
+          {
+            "rider": "Jonas Vingegaard",
+            "team": "Team Visma | Lease a Bike",
+            "why": "The closest GC threat and a rider who has to attack on terrain like this to claw back time."
+          },
+          {
+            "rider": "Florian Lipowitz",
+            "team": "Red Bull - BORA - hansgrohe",
+            "why": "Quietly solid in the mountains so far and well placed to move up on relentless, punchy climbing."
+          }
+        ]
       }
     ],
-    "strategy": "With the stage 8-14 transfer window now open, prioritise a climber like Pogačar or del Toro for the ambush-prone Le Lioran stage before rotating back to a pure sprinter for the flatter, shorter days into Nevers and Chalon-sur-Saône. Hold a breakaway-capable puncheur (Turgis or Godon) in reserve for both the choppy Ussel stage and the long Belfort haul, since neither offers a clean sprint finish. Since climbing days outscore sprint days in this format, keep the budget weighted toward the GC climbers and save the double-points bonus stage for a summit finish later in the race rather than spending it in this rolling, breakaway-heavy block."
+    "strategy": "With the stage 8-14 transfer window open, hold your climbers through the rest day and lean on them again for the Le Lioran ambush and the Vosges trap at Le Markstein, since climbing days outscore flat ones in this format. Rotate in a pure sprinter — Merlier is the standout after back-to-back wins — for the short, controlled days into Nevers and Chalon-sur-Saône, and keep a durable puncheur like Godon or Turgis in reserve for the long Belfort haul, which offers no clean sprint finish. Save the double-points bonus stage for a summit finish later in the race rather than spending it in this mixed, transitional block."
   }
 }

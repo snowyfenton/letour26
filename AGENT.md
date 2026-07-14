@@ -120,6 +120,13 @@ Parsing quirks in the extracted tables: the rider cell embeds the team name inli
 (e.g. `Pogačar TadejUAE Team Emirates - XRG`) and THAT is the reliable team — a
 separate team column exists but can be misaligned by a row. Time/gap cells render
 doubled (`0:230:23` means `0:23`), and `,,0:00` means same time as the leader.
+- ⚠️ In the GC standings table, the RIDER NAMES themselves can also be shifted by a
+  row (adjacent riders swapped) while rank/BIB/age/gap stay correct. Cross-check
+  every gcTop10 entry against the STAGE RESULT table's `GC` and `Timelag` columns
+  (each stage-result row shows that rider's GC rank and gap): the rider whose
+  stage-result row says GC rank R is the true holder of rank R. If the two tables
+  disagree on a name, trust the BIB number and the stage-result table. (This
+  exact trap produced a wrong top-10 on Jul 13 and Jul 14.)
 - Abandons: the stage-N result page also lists riders who left the race that stage
   (rows marked DNF / DNS / OTL / DSQ instead of a rank). Extract rider, team, and the
   marker for any such rows — no other text from those rows, and never a reason or
@@ -246,7 +253,12 @@ publish to here.now and you need NO credentials beyond your GitHub access.
 2. Validate it is parseable JSON and `standingsAfterStage` == N.
 3. Commit ONLY `site/data.json` with message `data: standings after stage N`.
 4. Push to `main`. The push IS the deployment — once it's on main, the site serves it.
-5. If the push fails, retry once; if it still fails, stop and report the error.
+   - NOTE (cloud runs): the cloud git proxy may redirect your push to an
+     auto-named side branch like `main-a1b2c3` instead of `main`. That is still
+     SUCCESS — do not retry, do not push again, and do not try to work around it.
+     A GitHub Action (`.github/workflows/promote-data.yml`) validates the branch
+     (must change only `site/data.json`) and promotes it to `main` automatically.
+5. If the push itself errors, retry once; if it still fails, stop and report the error.
 
 ## Weather
 

@@ -1,0 +1,91 @@
+# The claude.ai cloud routine cannot push to main directly — the cloud git proxy
+# redirects its push to an auto-named side branch (main-xxxxxx). This workflow
+# promotes such a branch to main IF AND ONLY IF it changes nothing but
+# site/data.json and that file passes validation. Pushing main IS the deployment
+# (the site reads data.json from raw.githubusercontent.com), so this is the last
+# gate before publish.
+name: Promote routine data to main
+
+on:
+  push:
+    branches:
+      - "main-**"
+      - "claude/**"
+
+concurrency:
+  group: promote-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check branch changes only site/data.json
+        id: gate
+        run: |
+          set -eu
+          git fetch origin main
+          CHANGED=$(git diff --name-only origin/main...HEAD)
+          echo "changed files vs main:"
+          echo "$CHANGED"
+          if [ -z "$CHANGED" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            echo "Nothing differs from main — skipping."
+            exit 0
+          fi
+          if [ "$CHANGED" != "site/data.json" ]; then
+            echo "Branch changes files other than site/data.json — refusing to promote." >&2
+            exit 1
+          fi
+          echo "skip=false" >> "$GITHUB_OUTPUT"
+
+      - name: Validate data.json
+        if: steps.gate.outputs.skip == 'false'
+        run: |
+          python3 - <<'EOF'
+          import json, sys
+          d = json.load(open("site/data.json", encoding="utf-8"))
+          n = d["standingsAfterStage"]
+          assert isinstance(n, int) and 0 <= n <= 21, "standingsAfterStage out of range"
+          assert d["nextStage"] in (n + 1, 21, None), "nextStage inconsistent"
+          assert len(d["gcTop10"]) == 10, "gcTop10 must have 10 entries"
+          for j in ("yellow", "green", "polkaDot", "white"):
+              assert d["jerseys"][j]["rider"], f"missing {j} jersey rider"
+          ab = d["abandons"]
+          assert ab["throughStage"] == n and all(r["stage"] <= n for r in ab["riders"]), "abandons inconsistent"
+          if d.get("odds") is not None:
+              assert d["odds"]["stage"] == d["nextStage"], "odds.stage != nextStage"
+          assert d["fantasy"]["formThroughStage"] == n - 1, "fantasy.formThroughStage != N-1"
+          print(f"data.json valid: standings after stage {n}")
+          EOF
+
+      - name: Fast-forward main to this branch
+        if: steps.gate.outputs.skip == 'false'
+        run: |
+          set -eu
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          BRANCH="${GITHUB_REF_NAME}"
+          git checkout main
+          if git merge --ff-only "origin/${BRANCH}" 2>/dev/null; then
+            echo "Fast-forwarded main to ${BRANCH}."
+          else
+            # main moved since the routine branched: take the branch's data.json
+            # onto current main (still only touches site/data.json per the gate).
+            git checkout "origin/${BRANCH}" -- site/data.json
+            MSG=$(git log -1 --format=%s "origin/${BRANCH}")
+            git commit -m "${MSG}" site/data.json
+            echo "Applied ${BRANCH}'s site/data.json onto main."
+          fi
+          git push origin main
+
+      - name: Delete promoted branch
+        if: steps.gate.outputs.skip == 'false'
+        run: git push origin --delete "${GITHUB_REF_NAME}" || true

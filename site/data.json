@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-07-14T09:33:47Z",
-  "standingsAfterStage": 9,
-  "nextStage": 10,
+  "updatedAt": "2026-07-15T09:07:47Z",
+  "standingsAfterStage": 10,
+  "nextStage": 11,
   "restDay": false,
   "note": null,
   "jerseys": {
@@ -18,8 +18,8 @@
       "team": "UAE Team Emirates - XRG"
     },
     "white": {
-      "rider": "Isaac del Toro",
-      "team": "UAE Team Emirates - XRG"
+      "rider": "Juan Ayuso",
+      "team": "Lidl - Trek"
     }
   },
   "gcTop10": [
@@ -33,61 +33,61 @@
       "rank": 2,
       "rider": "Jonas Vingegaard",
       "team": "Team Visma | Lease a Bike",
-      "gap": "+ 2:42"
+      "gap": "+ 3:36"
     },
     {
       "rank": 3,
-      "rider": "Isaac del Toro",
-      "team": "UAE Team Emirates - XRG",
-      "gap": "+ 3:27"
+      "rider": "Remco Evenepoel",
+      "team": "Red Bull - BORA - hansgrohe",
+      "gap": "+ 4:06"
     },
     {
       "rank": 4,
-      "rider": "Remco Evenepoel",
-      "team": "Red Bull - BORA - hansgrohe",
-      "gap": "+ 3:30"
+      "rider": "Juan Ayuso",
+      "team": "Lidl - Trek",
+      "gap": "+ 4:22"
     },
     {
       "rank": 5,
-      "rider": "Juan Ayuso",
-      "team": "Lidl - Trek",
-      "gap": "+ 3:34"
+      "rider": "Paul Seixas",
+      "team": "Decathlon CMA CGM Team",
+      "gap": "+ 4:35"
     },
     {
       "rank": 6,
-      "rider": "Paul Seixas",
-      "team": "Decathlon CMA CGM Team",
-      "gap": "+ 3:55"
+      "rider": "Florian Lipowitz",
+      "team": "Red Bull - BORA - hansgrohe",
+      "gap": "+ 4:44"
     },
     {
       "rank": 7,
-      "rider": "Florian Lipowitz",
-      "team": "Red Bull - BORA - hansgrohe",
-      "gap": "+ 4:00"
+      "rider": "Isaac del Toro",
+      "team": "UAE Team Emirates - XRG",
+      "gap": "+ 5:08"
     },
     {
       "rank": 8,
-      "rider": "Lenny Martinez",
-      "team": "Bahrain - Victorious",
-      "gap": "+ 4:21"
+      "rider": "Mattias Skjelmose",
+      "team": "Lidl - Trek",
+      "gap": "+ 5:45"
     },
     {
       "rank": 9,
-      "rider": "Mattias Skjelmose",
-      "team": "Lidl - Trek",
-      "gap": "+ 4:57"
+      "rider": "Lenny Martinez",
+      "team": "Bahrain - Victorious",
+      "gap": "+ 6:34"
     },
     {
       "rank": 10,
-      "rider": "Egan Bernal",
-      "team": "Netcompany INEOS",
-      "gap": "+ 9:12"
+      "rider": "Tom Pidcock",
+      "team": "Pinarello Q36.5 Pro Cycling Team",
+      "gap": "+ 11:49"
     }
   ],
   "combativity": null,
   "prevStageSummary": null,
   "abandons": {
-    "throughStage": 9,
+    "throughStage": 10,
     "riders": [
       {
         "rider": "Clément Berthet",
@@ -136,35 +136,19 @@
         "team": "Uno-X Mobility",
         "how": "DNS",
         "stage": 7
+      },
+      {
+        "rider": "Matteo Trentin",
+        "team": "Tudor Pro Cycling Team",
+        "how": "DNS",
+        "stage": 10
       }
     ]
   },
   "odds": null,
   "fantasy": {
-    "formThroughStage": 8,
+    "formThroughStage": 9,
     "days": [
-      {
-        "stage": 10,
-        "headline": "First stage back after the rest day, Aurillac to Le Lioran — steep, irregular Cantal climbs that suit an ambush more than a set-piece mountain train.",
-        "riderType": "Climber",
-        "picks": [
-          {
-            "rider": "Tadej Pogačar",
-            "team": "UAE Team Emirates - XRG",
-            "why": "The dominant climber of the race so far and the rider most likely to seize on any hesitation from rivals fresh off the rest day."
-          },
-          {
-            "rider": "Isaac del Toro",
-            "team": "UAE Team Emirates - XRG",
-            "why": "Has stayed glued to the front of the GC group in the mountains and is a threat to counter-attack on steep, irregular gradients."
-          },
-          {
-            "rider": "Lenny Martinez",
-            "team": "Bahrain - Victorious",
-            "why": "Climbed strongly through the Pyrenean queen stage and is built for exactly this kind of unpredictable medium-mountain terrain."
-          }
-        ]
-      },
       {
         "stage": 11,
         "headline": "A gentle, short run north along the Allier valley to Nevers — sprinters' day, with a fast, controlled race expected.",
@@ -252,8 +236,30 @@
             "why": "The form of the Tour's breakout young climber suits a day where repeated steep pitches matter more than raw altitude."
           }
         ]
+      },
+      {
+        "stage": 15,
+        "headline": "Into the Alps at last, capped by a savage, little-used summit finish at the Plateau de Solaison — with a rest day to follow, expect the GC favourites to empty the tank.",
+        "riderType": "Climber",
+        "picks": [
+          {
+            "rider": "Tadej Pogačar",
+            "team": "UAE Team Emirates - XRG",
+            "why": "The dominant climber of the race so far and the rider most able to press an advantage on a summit this steep."
+          },
+          {
+            "rider": "Jonas Vingegaard",
+            "team": "Team Visma | Lease a Bike",
+            "why": "The rider with the best track record of matching Pogačar on sustained high-mountain climbs, with a rest day cushion afterward to recover."
+          },
+          {
+            "rider": "Isaac del Toro",
+            "team": "UAE Team Emirates - XRG",
+            "why": "Has stayed glued to the front of the GC group in the mountains all race and is a threat to move on the toughest summit finish yet."
+          }
+        ]
       }
     ],
-    "strategy": "With the stage 8-14 transfer window still open, prioritise a climber like Pogačar, Vingegaard, or del Toro for the ambush-prone Le Lioran stage and the punchy Le Markstein finale, since climbing days outscore sprint days in this format. Rotate in a pure sprinter (Merlier is the clear pick) for the flatter, shorter days into Nevers and Chalon-sur-Saône, and hold a breakaway-capable puncheur (Turgis or Godon) in reserve for the long, rolling Belfort stage, which offers no clean sprint finish. Save the double-points bonus stage for a summit finish later in the race rather than spending it in this mixed block."
+    "strategy": "The stage 8-14 transfer window is still open for the Belfort breakaway day and the Le Markstein finale, so use it to lock in a durable puncheur alongside a core climbing pick, since climbing stages outscore sprint days in this format. Rotate a pure sprinter (Merlier remains the clear pick) in for the flat, controlled days into Nevers and Chalon-sur-Saône rather than paying a premium for climbers who'll sit idle. Save fresh transfers and the double-points bonus stage for the stage 15-21 window, which opens with the brutal Plateau de Solaison summit finish — a natural place to load up on GC climbers before the Alps take full control of the race."
   }
 }

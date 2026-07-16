@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-07-15T09:07:47Z",
-  "standingsAfterStage": 10,
-  "nextStage": 11,
+  "updatedAt": "2026-07-16T09:05:17Z",
+  "standingsAfterStage": 11,
+  "nextStage": 12,
   "restDay": false,
   "note": null,
   "jerseys": {
@@ -87,7 +87,7 @@
   "combativity": null,
   "prevStageSummary": null,
   "abandons": {
-    "throughStage": 10,
+    "throughStage": 11,
     "riders": [
       {
         "rider": "Clément Berthet",
@@ -142,44 +142,28 @@
         "team": "Tudor Pro Cycling Team",
         "how": "DNS",
         "stage": 10
+      },
+      {
+        "rider": "Chris Harper",
+        "team": "Pinarello Q36.5 Pro Cycling Team",
+        "how": "DNS",
+        "stage": 11
       }
     ]
   },
   "odds": null,
   "fantasy": {
-    "formThroughStage": 9,
+    "formThroughStage": 10,
     "days": [
       {
-        "stage": 11,
-        "headline": "A gentle, short run north along the Allier valley to Nevers — sprinters' day, with a fast, controlled race expected.",
-        "riderType": "Sprinter",
-        "picks": [
-          {
-            "rider": "Tim Merlier",
-            "team": "Soudal Quick-Step",
-            "why": "Won the Bordeaux sprint and is the man to beat whenever the race comes back together in a straight fight."
-          },
-          {
-            "rider": "Biniam Girmay",
-            "team": "NSN Cycling Team",
-            "why": "Podiumed behind Merlier in Bordeaux and has the top-end speed to go one better."
-          },
-          {
-            "rider": "Søren Wærenskjold",
-            "team": "Uno-X Mobility",
-            "why": "Runner-up in Bordeaux and in career-best sprint form."
-          }
-        ]
-      },
-      {
         "stage": 12,
-        "headline": "A novelty start at Magny-Cours then east across open Burgundy farmland to Chalon-sur-Saône — another sprint day, but crosswinds could split the bunch.",
+        "headline": "A novelty start at the Magny-Cours motor-racing circuit then east across open Burgundy farmland to Chalon-sur-Saône — another day for the sprinters, but open, exposed roads mean crosswinds could split the bunch.",
         "riderType": "Sprinter",
         "picks": [
           {
             "rider": "Tim Merlier",
             "team": "Soudal Quick-Step",
-            "why": "The in-form sprinter of the race; only a split bunch would seriously trouble him."
+            "why": "Won the Bordeaux sprint and remains the man to beat whenever the race comes back together in a straight fight."
           },
           {
             "rider": "Jasper Philipsen",
@@ -189,7 +173,7 @@
           {
             "rider": "Biniam Girmay",
             "team": "NSN Cycling Team",
-            "why": "Well-drilled leadout that holds up in a straight fight to the line."
+            "why": "Podiumed behind Merlier in Bordeaux and has a well-drilled leadout for a straight fight to the line."
           }
         ]
       },
@@ -223,7 +207,7 @@
           {
             "rider": "Tadej Pogačar",
             "team": "UAE Team Emirates - XRG",
-            "why": "The strongest climber in the race and the rider best placed to exploit a repeatedly punchy finale like this."
+            "why": "Won the mountain finish at Le Lioran and is the rider best placed to exploit a repeatedly punchy finale like this."
           },
           {
             "rider": "Jonas Vingegaard",
@@ -258,8 +242,30 @@
             "why": "Has stayed glued to the front of the GC group in the mountains all race and is a threat to move on the toughest summit finish yet."
           }
         ]
+      },
+      {
+        "stage": 16,
+        "headline": "The race against the clock along the shore of Lake Geneva from Évian to Thonon — flat, fast, pure power-TT terrain.",
+        "riderType": "TT specialist",
+        "picks": [
+          {
+            "rider": "Remco Evenepoel",
+            "team": "Red Bull - BORA - hansgrohe",
+            "why": "A former world time-trial champion and the strongest pure specialist against the watch in the field."
+          },
+          {
+            "rider": "Tadej Pogačar",
+            "team": "UAE Team Emirates - XRG",
+            "why": "Loses very little to the dedicated TT men and could extend his GC lead further on a course this fast."
+          },
+          {
+            "rider": "Joshua Tarling",
+            "team": "Netcompany INEOS",
+            "why": "A recognised TT specialist who can post a top result even outside the GC picture."
+          }
+        ]
       }
     ],
-    "strategy": "The stage 8-14 transfer window is still open for the Belfort breakaway day and the Le Markstein finale, so use it to lock in a durable puncheur alongside a core climbing pick, since climbing stages outscore sprint days in this format. Rotate a pure sprinter (Merlier remains the clear pick) in for the flat, controlled days into Nevers and Chalon-sur-Saône rather than paying a premium for climbers who'll sit idle. Save fresh transfers and the double-points bonus stage for the stage 15-21 window, which opens with the brutal Plateau de Solaison summit finish — a natural place to load up on GC climbers before the Alps take full control of the race."
+    "strategy": "The stage 8-14 transfer window closes with the Le Markstein mountain finale, so use any remaining transfers now to lock in a durable breakaway pick for Belfort alongside a core climber for the Vosges — climbing stages outscore sprint days in this format. Keep a pure sprinter (Merlier remains the standout) in the squad for the flat run to Chalon-sur-Saône rather than paying a premium for climbers who'll sit idle that day. Save the double-points bonus stage and fresh transfers for the stage 15-21 window, which opens with the brutal Plateau de Solaison summit finish and also contains the Évian-Thonon time trial — a good moment to add a TT specialist alongside the GC climbers before the Alps take full control of the race."
   }
 }

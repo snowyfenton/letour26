@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-07-16T09:05:17Z",
-  "standingsAfterStage": 11,
-  "nextStage": 12,
+  "updatedAt": "2026-07-17T09:06:26Z",
+  "standingsAfterStage": 12,
+  "nextStage": 13,
   "restDay": false,
   "note": null,
   "jerseys": {
@@ -84,10 +84,14 @@
       "gap": "+ 11:49"
     }
   ],
-  "combativity": null,
+  "combativity": {
+    "rider": "Baptiste Veistroffer",
+    "team": "Lotto Intermarché",
+    "stage": 12
+  },
   "prevStageSummary": null,
   "abandons": {
-    "throughStage": 11,
+    "throughStage": 12,
     "riders": [
       {
         "rider": "Clément Berthet",
@@ -153,30 +157,8 @@
   },
   "odds": null,
   "fantasy": {
-    "formThroughStage": 10,
+    "formThroughStage": 11,
     "days": [
-      {
-        "stage": 12,
-        "headline": "A novelty start at the Magny-Cours motor-racing circuit then east across open Burgundy farmland to Chalon-sur-Saône — another day for the sprinters, but open, exposed roads mean crosswinds could split the bunch.",
-        "riderType": "Sprinter",
-        "picks": [
-          {
-            "rider": "Tim Merlier",
-            "team": "Soudal Quick-Step",
-            "why": "Won the Bordeaux sprint and remains the man to beat whenever the race comes back together in a straight fight."
-          },
-          {
-            "rider": "Jasper Philipsen",
-            "team": "Alpecin - Premier Tech",
-            "why": "Consistently in the mix in the bunch sprints and dangerous if the wind picks up and echelons form."
-          },
-          {
-            "rider": "Biniam Girmay",
-            "team": "NSN Cycling Team",
-            "why": "Podiumed behind Merlier in Bordeaux and has a well-drilled leadout for a straight fight to the line."
-          }
-        ]
-      },
       {
         "stage": 13,
         "headline": "The longest stage of the race skirts the edge of the Jura to Belfort — distance plus constant rolling terrain makes this a strongman's breakaway day.",
@@ -264,8 +246,30 @@
             "why": "A recognised TT specialist who can post a top result even outside the GC picture."
           }
         ]
+      },
+      {
+        "stage": 17,
+        "headline": "A lumpy transition through the foothills of the Chartreuse to Voiron — nominally a sprint stage, but textured enough that a well-drilled breakaway could steal it before the high Alps arrive in earnest.",
+        "riderType": "Breakaway specialist",
+        "picks": [
+          {
+            "rider": "Mads Pedersen",
+            "team": "Lidl - Trek",
+            "why": "Versatile enough to win from a reduced group if the terrain shells the pure sprinters before the line."
+          },
+          {
+            "rider": "Biniam Girmay",
+            "team": "NSN Cycling Team",
+            "why": "Has been a fixture on the podium in reduced bunch finishes all race."
+          },
+          {
+            "rider": "Matej Mohorič",
+            "team": "Bahrain - Victorious",
+            "why": "A craft breakaway rider who specialises in exactly this kind of lumpy, last-chance-before-the-mountains stage."
+          }
+        ]
       }
     ],
-    "strategy": "The stage 8-14 transfer window closes with the Le Markstein mountain finale, so use any remaining transfers now to lock in a durable breakaway pick for Belfort alongside a core climber for the Vosges — climbing stages outscore sprint days in this format. Keep a pure sprinter (Merlier remains the standout) in the squad for the flat run to Chalon-sur-Saône rather than paying a premium for climbers who'll sit idle that day. Save the double-points bonus stage and fresh transfers for the stage 15-21 window, which opens with the brutal Plateau de Solaison summit finish and also contains the Évian-Thonon time trial — a good moment to add a TT specialist alongside the GC climbers before the Alps take full control of the race."
+    "strategy": "The stage 8-14 transfer window closes after the Le Markstein mountain finish, so use any remaining transfers now to lock in a durable breakaway pick for the Dole-Belfort slog alongside a core climber for the Vosges — climbing stages outscore sprint days in this format. Don't overpay for a pure sprinter this window; Chambéry-Voiron rewards a versatile classics rider over an out-and-out fast man if the breakaway goes clear. Save the double-points bonus stage and fresh transfers for the stage 15-21 window, which opens with the brutal Plateau de Solaison summit finish and also contains the Évian-Thonon time trial — a good moment to add a TT specialist alongside the GC climbers before the Alps take full control of the race."
   }
 }

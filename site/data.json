@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-07-17T09:06:26Z",
-  "standingsAfterStage": 12,
-  "nextStage": 13,
+  "updatedAt": "2026-07-18T09:07:00Z",
+  "standingsAfterStage": 13,
+  "nextStage": 14,
   "restDay": false,
   "note": null,
   "jerseys": {
@@ -43,55 +43,55 @@
     },
     {
       "rank": 4,
+      "rider": "Tom Pidcock",
+      "team": "Pinarello Q36.5 Pro Cycling Team",
+      "gap": "+ 4:15"
+    },
+    {
+      "rank": 5,
       "rider": "Juan Ayuso",
       "team": "Lidl - Trek",
       "gap": "+ 4:22"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "rider": "Paul Seixas",
       "team": "Decathlon CMA CGM Team",
       "gap": "+ 4:35"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "rider": "Florian Lipowitz",
       "team": "Red Bull - BORA - hansgrohe",
       "gap": "+ 4:44"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "rider": "Isaac del Toro",
       "team": "UAE Team Emirates - XRG",
       "gap": "+ 5:08"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "rider": "Mattias Skjelmose",
       "team": "Lidl - Trek",
       "gap": "+ 5:45"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "rider": "Lenny Martinez",
       "team": "Bahrain - Victorious",
       "gap": "+ 6:34"
-    },
-    {
-      "rank": 10,
-      "rider": "Tom Pidcock",
-      "team": "Pinarello Q36.5 Pro Cycling Team",
-      "gap": "+ 11:49"
     }
   ],
   "combativity": {
-    "rider": "Baptiste Veistroffer",
-    "team": "Lotto Intermarché",
-    "stage": 12
+    "rider": "Tom Pidcock",
+    "team": "Pinarello Q36.5 Pro Cycling Team",
+    "stage": 13
   },
   "prevStageSummary": null,
   "abandons": {
-    "throughStage": 12,
+    "throughStage": 13,
     "riders": [
       {
         "rider": "Clément Berthet",
@@ -152,35 +152,31 @@
         "team": "Pinarello Q36.5 Pro Cycling Team",
         "how": "DNS",
         "stage": 11
+      },
+      {
+        "rider": "Fernando Gaviria",
+        "team": "Caja Rural - Seguros RGA",
+        "how": "DNS",
+        "stage": 13
+      },
+      {
+        "rider": "Frits Biesterbos",
+        "team": "Team Picnic PostNL",
+        "how": "DNS",
+        "stage": 13
+      },
+      {
+        "rider": "Jenno Berckmoes",
+        "team": "Lotto Intermarché",
+        "how": "DNS",
+        "stage": 13
       }
     ]
   },
   "odds": null,
   "fantasy": {
-    "formThroughStage": 11,
+    "formThroughStage": 12,
     "days": [
-      {
-        "stage": 13,
-        "headline": "The longest stage of the race skirts the edge of the Jura to Belfort — distance plus constant rolling terrain makes this a strongman's breakaway day.",
-        "riderType": "Breakaway specialist",
-        "picks": [
-          {
-            "rider": "Dorian Godon",
-            "team": "Netcompany INEOS",
-            "why": "A durable puncheur who can survive a long day out front in the escape."
-          },
-          {
-            "rider": "Anthony Turgis",
-            "team": "TotalEnergies",
-            "why": "Loves a long, rolling breakaway stage exactly like this one."
-          },
-          {
-            "rider": "Mathieu van der Poel",
-            "team": "Alpecin - Premier Tech",
-            "why": "A classics powerhouse capable of forcing the winning move on a long, punchy stage."
-          }
-        ]
-      },
       {
         "stage": 14,
         "headline": "A dense Vosges mountain stage into Le Markstein Fellering — the gradients aren't Alpine but the climbs come relentlessly, punishing any off day.",
@@ -268,8 +264,30 @@
             "why": "A craft breakaway rider who specialises in exactly this kind of lumpy, last-chance-before-the-mountains stage."
           }
         ]
+      },
+      {
+        "stage": 18,
+        "headline": "A long Alpine haul to the historic ski station at Orcières-Merlette — a steady rather than savage finale that suits a sustained, team-led GC assault.",
+        "riderType": "Climber",
+        "picks": [
+          {
+            "rider": "Tadej Pogačar",
+            "team": "UAE Team Emirates - XRG",
+            "why": "The strongest team and the strongest rider on any climb where a long, sustained effort rather than a single sharp kick decides things."
+          },
+          {
+            "rider": "Jonas Vingegaard",
+            "team": "Team Visma | Lease a Bike",
+            "why": "Built for exactly this kind of steady, high-altitude grind rather than a punchy uphill sprint."
+          },
+          {
+            "rider": "Juan Ayuso",
+            "team": "Lidl - Trek",
+            "why": "Has climbed consistently with the GC group all race and a long, even gradient plays to his engine."
+          }
+        ]
       }
     ],
-    "strategy": "The stage 8-14 transfer window closes after the Le Markstein mountain finish, so use any remaining transfers now to lock in a durable breakaway pick for the Dole-Belfort slog alongside a core climber for the Vosges — climbing stages outscore sprint days in this format. Don't overpay for a pure sprinter this window; Chambéry-Voiron rewards a versatile classics rider over an out-and-out fast man if the breakaway goes clear. Save the double-points bonus stage and fresh transfers for the stage 15-21 window, which opens with the brutal Plateau de Solaison summit finish and also contains the Évian-Thonon time trial — a good moment to add a TT specialist alongside the GC climbers before the Alps take full control of the race."
+    "strategy": "The stage 8-14 transfer window closes after tomorrow's Le Markstein mountain finish, so use any remaining transfers now to lock in a core climber for the Vosges test — climbing stages outscore sprint days in this format. Don't overpay for a pure sprinter this window; Chambéry-Voiron rewards a versatile classics rider over an out-and-out fast man if the breakaway goes clear. Save the double-points bonus stage and fresh transfers for the stage 15-21 window, which opens with the brutal Plateau de Solaison summit finish and also contains the Évian-Thonon time trial and the long Orcières-Merlette climb — good moments to balance a TT specialist alongside durable GC climbers as the Alps take full control of the race."
   }
 }

@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-07-18T09:07:00Z",
-  "standingsAfterStage": 13,
-  "nextStage": 14,
+  "updatedAt": "2026-07-19T09:07:54Z",
+  "standingsAfterStage": 14,
+  "nextStage": 15,
   "restDay": false,
   "note": null,
   "jerseys": {
@@ -18,8 +18,8 @@
       "team": "UAE Team Emirates - XRG"
     },
     "white": {
-      "rider": "Juan Ayuso",
-      "team": "Lidl - Trek"
+      "rider": "Paul Seixas",
+      "team": "Decathlon CMA CGM Team"
     }
   },
   "gcTop10": [
@@ -33,65 +33,61 @@
       "rank": 2,
       "rider": "Jonas Vingegaard",
       "team": "Team Visma | Lease a Bike",
-      "gap": "+ 3:36"
+      "gap": "+ 4:30"
     },
     {
       "rank": 3,
       "rider": "Remco Evenepoel",
       "team": "Red Bull - BORA - hansgrohe",
-      "gap": "+ 4:06"
+      "gap": "+ 5:04"
     },
     {
       "rank": 4,
-      "rider": "Tom Pidcock",
-      "team": "Pinarello Q36.5 Pro Cycling Team",
-      "gap": "+ 4:15"
+      "rider": "Paul Seixas",
+      "team": "Decathlon CMA CGM Team",
+      "gap": "+ 5:19"
     },
     {
       "rank": 5,
-      "rider": "Juan Ayuso",
-      "team": "Lidl - Trek",
-      "gap": "+ 4:22"
+      "rider": "Florian Lipowitz",
+      "team": "Red Bull - BORA - hansgrohe",
+      "gap": "+ 5:22"
     },
     {
       "rank": 6,
-      "rider": "Paul Seixas",
-      "team": "Decathlon CMA CGM Team",
-      "gap": "+ 4:35"
+      "rider": "Juan Ayuso",
+      "team": "Lidl - Trek",
+      "gap": "+ 5:44"
     },
     {
       "rank": 7,
-      "rider": "Florian Lipowitz",
-      "team": "Red Bull - BORA - hansgrohe",
-      "gap": "+ 4:44"
+      "rider": "Isaac del Toro",
+      "team": "UAE Team Emirates - XRG",
+      "gap": "+ 5:50"
     },
     {
       "rank": 8,
-      "rider": "Isaac del Toro",
-      "team": "UAE Team Emirates - XRG",
-      "gap": "+ 5:08"
+      "rider": "Mattias Skjelmose",
+      "team": "Lidl - Trek",
+      "gap": "+ 7:35"
     },
     {
       "rank": 9,
-      "rider": "Mattias Skjelmose",
-      "team": "Lidl - Trek",
-      "gap": "+ 5:45"
+      "rider": "Tom Pidcock",
+      "team": "Pinarello Q36.5 Pro Cycling Team",
+      "gap": "+ 7:59"
     },
     {
       "rank": 10,
       "rider": "Lenny Martinez",
       "team": "Bahrain - Victorious",
-      "gap": "+ 6:34"
+      "gap": "+ 8:25"
     }
   ],
-  "combativity": {
-    "rider": "Tom Pidcock",
-    "team": "Pinarello Q36.5 Pro Cycling Team",
-    "stage": 13
-  },
+  "combativity": null,
   "prevStageSummary": null,
   "abandons": {
-    "throughStage": 13,
+    "throughStage": 14,
     "riders": [
       {
         "rider": "Clément Berthet",
@@ -170,35 +166,25 @@
         "team": "Lotto Intermarché",
         "how": "DNS",
         "stage": 13
+      },
+      {
+        "rider": "Anthon Charmig",
+        "team": "Uno-X Mobility",
+        "how": "OTL",
+        "stage": 14
+      },
+      {
+        "rider": "Ramses Debruyne",
+        "team": "Alpecin - Premier Tech",
+        "how": "DNS",
+        "stage": 14
       }
     ]
   },
   "odds": null,
   "fantasy": {
-    "formThroughStage": 12,
+    "formThroughStage": 13,
     "days": [
-      {
-        "stage": 14,
-        "headline": "A dense Vosges mountain stage into Le Markstein Fellering — the gradients aren't Alpine but the climbs come relentlessly, punishing any off day.",
-        "riderType": "Climber",
-        "picks": [
-          {
-            "rider": "Tadej Pogačar",
-            "team": "UAE Team Emirates - XRG",
-            "why": "Won the mountain finish at Le Lioran and is the rider best placed to exploit a repeatedly punchy finale like this."
-          },
-          {
-            "rider": "Jonas Vingegaard",
-            "team": "Team Visma | Lease a Bike",
-            "why": "The clearest GC threat to Pogačar so far and a rider who thrives when climbs come back-to-back rather than in one long haul."
-          },
-          {
-            "rider": "Florian Lipowitz",
-            "team": "Red Bull - BORA - hansgrohe",
-            "why": "The form of the Tour's breakout young climber suits a day where repeated steep pitches matter more than raw altitude."
-          }
-        ]
-      },
       {
         "stage": 15,
         "headline": "Into the Alps at last, capped by a savage, little-used summit finish at the Plateau de Solaison — with a rest day to follow, expect the GC favourites to empty the tank.",
@@ -286,8 +272,30 @@
             "why": "Has climbed consistently with the GC group all race and a long, even gradient plays to his engine."
           }
         ]
+      },
+      {
+        "stage": 19,
+        "headline": "Short, sharp and explosive: under 130 km from Gap to the 21 hairpins of Alpe d'Huez — a stage built for chaos and long-range attacks rather than a controlled train.",
+        "riderType": "Climber",
+        "picks": [
+          {
+            "rider": "Tadej Pogačar",
+            "team": "UAE Team Emirates - XRG",
+            "why": "The rider best equipped to go long-range on a short mountain stage where explosive, decisive racing suits him most."
+          },
+          {
+            "rider": "Jonas Vingegaard",
+            "team": "Team Visma | Lease a Bike",
+            "why": "Historically dangerous when a short, sharp mountain stage invites early, race-breaking moves rather than a slow burn."
+          },
+          {
+            "rider": "Lenny Martinez",
+            "team": "Bahrain - Victorious",
+            "why": "An aggressive climber who thrives in the kind of unpredictable, attack-heavy racing a short summit finish like this breeds."
+          }
+        ]
       }
     ],
-    "strategy": "The stage 8-14 transfer window closes after tomorrow's Le Markstein mountain finish, so use any remaining transfers now to lock in a core climber for the Vosges test — climbing stages outscore sprint days in this format. Don't overpay for a pure sprinter this window; Chambéry-Voiron rewards a versatile classics rider over an out-and-out fast man if the breakaway goes clear. Save the double-points bonus stage and fresh transfers for the stage 15-21 window, which opens with the brutal Plateau de Solaison summit finish and also contains the Évian-Thonon time trial and the long Orcières-Merlette climb — good moments to balance a TT specialist alongside durable GC climbers as the Alps take full control of the race."
+    "strategy": "The stage 15-21 transfer window opens today, so use fresh transfers now to load up on GC climbers ahead of the brutal Plateau de Solaison summit finish — this run of stages is climbing-heavy (15, 18, 19 and 20 are all mountains), so a pure sprinter is dead weight for most of the window. The Évian-Thonon time trial is the one clear window to also field a TT specialist without sacrificing climbing points elsewhere. Save the double-points bonus stage for one of the marquee mountain days later in the window — Alpe d'Huez back-to-back on stages 19 and 20 is the standout candidate — and keep enough budget in reserve to react once the road to Paris starts to take shape."
   }
 }

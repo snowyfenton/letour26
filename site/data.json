@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-07-19T09:07:54Z",
-  "standingsAfterStage": 14,
-  "nextStage": 15,
-  "restDay": false,
+  "updatedAt": "2026-07-20T09:08:45Z",
+  "standingsAfterStage": 15,
+  "nextStage": 16,
+  "restDay": true,
   "note": null,
   "jerseys": {
     "yellow": {
@@ -31,63 +31,63 @@
     },
     {
       "rank": 2,
-      "rider": "Jonas Vingegaard",
-      "team": "Team Visma | Lease a Bike",
-      "gap": "+ 4:30"
+      "rider": "Remco Evenepoel",
+      "team": "Red Bull - BORA - hansgrohe",
+      "gap": "+ 5:00"
     },
     {
       "rank": 3,
-      "rider": "Remco Evenepoel",
-      "team": "Red Bull - BORA - hansgrohe",
-      "gap": "+ 5:04"
+      "rider": "Isaac del Toro",
+      "team": "UAE Team Emirates - XRG",
+      "gap": "+ 5:58"
     },
     {
       "rank": 4,
       "rider": "Paul Seixas",
       "team": "Decathlon CMA CGM Team",
-      "gap": "+ 5:19"
+      "gap": "+ 6:23"
     },
     {
       "rank": 5,
       "rider": "Florian Lipowitz",
       "team": "Red Bull - BORA - hansgrohe",
-      "gap": "+ 5:22"
+      "gap": "+ 6:48"
     },
     {
       "rank": 6,
       "rider": "Juan Ayuso",
       "team": "Lidl - Trek",
-      "gap": "+ 5:44"
+      "gap": "+ 7:28"
     },
     {
       "rank": 7,
-      "rider": "Isaac del Toro",
-      "team": "UAE Team Emirates - XRG",
-      "gap": "+ 5:50"
+      "rider": "Lenny Martinez",
+      "team": "Bahrain - Victorious",
+      "gap": "+ 9:38"
     },
     {
       "rank": 8,
       "rider": "Mattias Skjelmose",
       "team": "Lidl - Trek",
-      "gap": "+ 7:35"
+      "gap": "+ 10:28"
     },
     {
       "rank": 9,
       "rider": "Tom Pidcock",
       "team": "Pinarello Q36.5 Pro Cycling Team",
-      "gap": "+ 7:59"
+      "gap": "+ 11:19"
     },
     {
       "rank": 10,
-      "rider": "Lenny Martinez",
-      "team": "Bahrain - Victorious",
-      "gap": "+ 8:25"
+      "rider": "Jordan Jegat",
+      "team": "TotalEnergies",
+      "gap": "+ 19:26"
     }
   ],
   "combativity": null,
   "prevStageSummary": null,
   "abandons": {
-    "throughStage": 14,
+    "throughStage": 15,
     "riders": [
       {
         "rider": "Clément Berthet",
@@ -178,35 +178,31 @@
         "team": "Alpecin - Premier Tech",
         "how": "DNS",
         "stage": 14
+      },
+      {
+        "rider": "Tim Merlier",
+        "team": "Soudal Quick-Step",
+        "how": "DNF",
+        "stage": 15
+      },
+      {
+        "rider": "Jonas Vingegaard",
+        "team": "Team Visma | Lease a Bike",
+        "how": "DNF",
+        "stage": 15
+      },
+      {
+        "rider": "Tom Van Asbroeck",
+        "team": "NSN Cycling Team",
+        "how": "DNF",
+        "stage": 15
       }
     ]
   },
   "odds": null,
   "fantasy": {
-    "formThroughStage": 13,
+    "formThroughStage": 14,
     "days": [
-      {
-        "stage": 15,
-        "headline": "Into the Alps at last, capped by a savage, little-used summit finish at the Plateau de Solaison — with a rest day to follow, expect the GC favourites to empty the tank.",
-        "riderType": "Climber",
-        "picks": [
-          {
-            "rider": "Tadej Pogačar",
-            "team": "UAE Team Emirates - XRG",
-            "why": "The dominant climber of the race so far and the rider most able to press an advantage on a summit this steep."
-          },
-          {
-            "rider": "Jonas Vingegaard",
-            "team": "Team Visma | Lease a Bike",
-            "why": "The rider with the best track record of matching Pogačar on sustained high-mountain climbs, with a rest day cushion afterward to recover."
-          },
-          {
-            "rider": "Isaac del Toro",
-            "team": "UAE Team Emirates - XRG",
-            "why": "Has stayed glued to the front of the GC group in the mountains all race and is a threat to move on the toughest summit finish yet."
-          }
-        ]
-      },
       {
         "stage": 16,
         "headline": "The race against the clock along the shore of Lake Geneva from Évian to Thonon — flat, fast, pure power-TT terrain.",
@@ -262,9 +258,9 @@
             "why": "The strongest team and the strongest rider on any climb where a long, sustained effort rather than a single sharp kick decides things."
           },
           {
-            "rider": "Jonas Vingegaard",
-            "team": "Team Visma | Lease a Bike",
-            "why": "Built for exactly this kind of steady, high-altitude grind rather than a punchy uphill sprint."
+            "rider": "Remco Evenepoel",
+            "team": "Red Bull - BORA - hansgrohe",
+            "why": "A strong, consistent climber who has stayed within touching distance of the GC lead all race and has the legs for a long, steady grind like this."
           },
           {
             "rider": "Juan Ayuso",
@@ -284,9 +280,9 @@
             "why": "The rider best equipped to go long-range on a short mountain stage where explosive, decisive racing suits him most."
           },
           {
-            "rider": "Jonas Vingegaard",
-            "team": "Team Visma | Lease a Bike",
-            "why": "Historically dangerous when a short, sharp mountain stage invites early, race-breaking moves rather than a slow burn."
+            "rider": "Isaac del Toro",
+            "team": "UAE Team Emirates - XRG",
+            "why": "Has stayed glued to the front of the GC group in the mountains all race and is a threat to move on a stage built for chaos."
           },
           {
             "rider": "Lenny Martinez",
@@ -294,8 +290,30 @@
             "why": "An aggressive climber who thrives in the kind of unpredictable, attack-heavy racing a short summit finish like this breeds."
           }
         ]
+      },
+      {
+        "stage": 20,
+        "headline": "The queen stage and the last mountain day of the race — over 5,600 m of climbing finishing up Alpe d'Huez a second day running, the final chance to make or defend the GC.",
+        "riderType": "Climber",
+        "picks": [
+          {
+            "rider": "Tadej Pogačar",
+            "team": "UAE Team Emirates - XRG",
+            "why": "The dominant climber of the race and the rider with the most to defend on the last mountain stage of the Tour."
+          },
+          {
+            "rider": "Remco Evenepoel",
+            "team": "Red Bull - BORA - hansgrohe",
+            "why": "A strong, consistent climbing threat who has stayed within touching distance of the GC lead all race — the last mountain day is a final chance to press that attack."
+          },
+          {
+            "rider": "Florian Lipowitz",
+            "team": "Red Bull - BORA - hansgrohe",
+            "why": "Has been a steady, high-level climber all race and a stage this brutal suits a rider who can pace a long effort rather than just punch."
+          }
+        ]
       }
     ],
-    "strategy": "The stage 15-21 transfer window opens today, so use fresh transfers now to load up on GC climbers ahead of the brutal Plateau de Solaison summit finish — this run of stages is climbing-heavy (15, 18, 19 and 20 are all mountains), so a pure sprinter is dead weight for most of the window. The Évian-Thonon time trial is the one clear window to also field a TT specialist without sacrificing climbing points elsewhere. Save the double-points bonus stage for one of the marquee mountain days later in the window — Alpe d'Huez back-to-back on stages 19 and 20 is the standout candidate — and keep enough budget in reserve to react once the road to Paris starts to take shape."
+    "strategy": "The stage 15-21 transfer window is open, and this run is brutally climbing-heavy — three summit finishes (18, 19, 20) bookending a flat, fast ITT — so prioritise GC climbers and a TT engine over sprinters, who have little to do until Paris. Use today's transfers to add a pure time-trial specialist for stage 16, then hold your climbing squad steady through the back-to-back Alpe d'Huez days. Save the double-points bonus stage for stage 20 — the last mountain day of the race and the highest-scoring stage on the calendar — and keep a small budget buffer in case the GC picture shifts sharply on the time trial."
   }
 }

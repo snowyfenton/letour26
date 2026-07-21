@@ -116,7 +116,7 @@ RnkGCTimelagBIBH2HSpecialtyAgeRiderTeamUCIPntTime
 10 | 25 | +1:23:30 | 34 |  | Hills | 25 | Simmons Quinn Lidl - Trek | Lidl - Trek | 30 | 10 |  | 2:162:16
 11 | 11 | +21:44 | 198 |  | GC | 27 | Voisard Yannis Tudor Pro Cycling Team | Tudor Pro Cycling Team | 25 | 8 |  | 2:222:22
 12 | 12 | +22:08 | 41 |  | Climber | 33 | Carapaz RichardEF Education - EasyPost | EF Education - EasyPost | 20 | 6 |  | 2:512:51
-13 | 9 | +11:19 | 171 |  | Classic | 26 | Pidcock Tom Pinarello Q36.5 Pro Cycling Team | Pinarello Q36.5 Pro Cycling Team | 15 -15 | 4 | -10″ | 2:542:54
+13 | 9 | +11:19 | 171 |  | Classic | 26 | Pidcock Tom Pinarello Q36.5 Pro Cycling Team | Pinarello Q36.5 Pro Cycling Team | 15 -30 | 4 | -20″ | 2:542:54
 14 | 10 | +19:26 | 201 |  | Climber | 27 | Jegat JordanTotalEnergies | TotalEnergies | 10 | 2 |  | 3:173:17
 15 | 35 | +1:54:26 | 77 |  | GC | 25 | Rubio Einer Movistar Team | Bahrain - Victorious | 5 | 1 |  | 4:224:22
 16 | 26 | +1:32:09 | 148 |  | Climber | 28 | Tiberi AntonioBahrain - Victorious | Movistar Team |  |  |  | 4:554:55
@@ -598,10 +598,10 @@ RnkPrev▼▲BIBH2HSpecialtyAgeRiderTeamPntToday
 3 | 3 | - | 41 |  | Climber | 33 | Carapaz RichardEF Education - EasyPost | EF Education - EasyPost | 39 | +1
 4 | 5 | ▲1 | 51 |  | Climber | 19 | Seixas PaulDecathlon CMA CGM Team | Decathlon CMA CGM Team | 34 | +10
 5 | 13 | ▲8 | 21 |  | Climber | 26 | Evenepoel RemcoRed Bull - BORA - hansgrohe | Red Bull - BORA - hansgrohe | 31 | +20
-6 | 7 | ▲1 | 2 |  | Climber | 22 | del Toro IsaacUAE Team Emirates - XRG | UAE Team Emirates - XRG | 30 | +12
-7 | 10 | ▲3 | 71 |  | Climber | 23 | Martinez LennyBahrain - Victorious | Bahrain - Victorious | 22 | +6
-8 | 6 | ▼2 | 171 |  | Classic | 26 | Lipowitz FlorianRed Bull - BORA - hansgrohe | Pinarello Q36.5 Pro Cycling Team | 20 | +2
-9 | 12 | ▲3 | 25 |  | GC | 25 | Pidcock TomPinarello Q36.5 Pro Cycling Team | Red Bull - BORA - hansgrohe | 20 | +8
+6 | 7 | ▲1 | 2 |  | Climber | 22 | Martinez LennyBahrain - Victorious | UAE Team Emirates - XRG | 30 | +12
+7 | 10 | ▲3 | 71 |  | Climber | 23 | del Toro IsaacUAE Team Emirates - XRG | Bahrain - Victorious | 22 | +6
+8 | 6 | ▼2 | 171 |  | Classic | 26 | Pidcock TomPinarello Q36.5 Pro Cycling Team | Pinarello Q36.5 Pro Cycling Team | 20 | +2
+9 | 12 | ▲3 | 25 |  | GC | 25 | Lipowitz FlorianRed Bull - BORA - hansgrohe | Red Bull - BORA - hansgrohe | 20 | +8
 10 | 8 | ▼2 | 57 |  | GC | 29 | Prodhomme NicolasDecathlon CMA CGM Team | Decathlon CMA CGM Team | 17 | 
 11 | 9 | ▼2 | 43 |  | Climber | 25 | Baudin AlexEF Education - EasyPost | EF Education - EasyPost | 16 | 
 12 | 11 | ▼1 | 121 |  | Climber | 26 | Johannessen Tobias HallandUno-X Mobility | Uno-X Mobility | 16 | 
@@ -611,8 +611,8 @@ RnkPrev▼▲BIBH2HSpecialtyAgeRiderTeamPntToday
 16 | 16 | - | 44 |  | Climber | 25 | Healy BenEF Education - EasyPost | EF Education - EasyPost | 8 | 
 17 | 24 | ▲7 | 148 |  | Climber | 28 | Rubio EinerMovistar Team | Movistar Team | 7 | +2
 18 | 17 | ▼1 | 144 |  | Hills | 25 | García Pierna RaúlMovistar Team | Movistar Team | 7 | 
-19 | 18 | ▼1 | 4 |  | GC | 28 | Skjelmose MattiasLidl - Trek | UAE Team Emirates - XRG | 6 | 
-20 | 38 | ▲18 | 35 |  | Climber | 25 | McNulty BrandonUAE Team Emirates - XRG | Lidl - Trek | 6 | +4
+19 | 18 | ▼1 | 4 |  | GC | 28 | McNulty BrandonUAE Team Emirates - XRG | UAE Team Emirates - XRG | 6 | 
+20 | 38 | ▲18 | 35 |  | Climber | 25 | Skjelmose MattiasLidl - Trek | Lidl - Trek | 6 | +4
 21 |  |  | 198 |  | GC | 27 | Voisard YannisTudor Pro Cycling Team | Tudor Pro Cycling Team | 6 | 6
 22 | 19 | ▼3 | 28 |  | Classic | 26 | Van Gils MaximRed Bull - BORA - hansgrohe | Red Bull - BORA - hansgrohe | 6 | 
 23 | 20 | ▼3 | 7 |  | GC | 35 | Wellens TimUAE Team Emirates - XRG | UAE Team Emirates - XRG | 6 | 
@@ -689,8 +689,8 @@ RnkPrev▼▲BIBH2HSpecialtyAgeRiderTeamTimeTime won/lost
 12 | 12 | - | 144 |  | Hills | 25 | García Pierna RaúlMovistar Team | Movistar Team | 1:53:341:53:34 | ..
 13 | 10 | ▼3 | 93 |  | Climber | 25 | Paret-Peintre ValentinSoudal Quick-Step | Soudal Quick-Step | 1:59:291:59:29 | ..
 14 | 14 | - | 43 |  | Climber | 25 | Baudin AlexEF Education - EasyPost | EF Education - EasyPost | 2:01:162:01:16 | ..
-15 | 11 | ▼4 | 37 |  | TT | 24 | Vacek MathiasLidl - Trek | Lidl - Trek | 2:08:372:08:37 | ..
-16 | 16 | - | 181 |  | Classic | 23 | Grégoire RomainGroupama - FDJ United | Groupama - FDJ United | 2:25:572:25:57 | ..
+15 | 11 | ▼4 | 37 |  | TT | 24 | Grégoire RomainGroupama - FDJ United | Lidl - Trek | 2:08:372:08:37 | ..
+16 | 16 | - | 181 |  | Classic | 23 | Vacek MathiasLidl - Trek | Groupama - FDJ United | 2:25:572:25:57 | ..
 17 | 17 | - | 154 |  | GC | 24 | Craps LarsLotto Intermarché | Lotto Intermarché | 2:33:342:33:34 | ..
 18 | 21 | ▲3 | 184 |  | GC | 23 | Costiou EwenGroupama - FDJ United | Groupama - FDJ United | 2:43:212:43:21 | ..
 19 | 20 | ▲1 | 185 |  | GC | 24 | Germani LorenzoGroupama - FDJ United | Groupama - FDJ United | 2:56:332:56:33 | ..
@@ -703,8 +703,8 @@ RnkPrev▼▲BIBH2HSpecialtyAgeRiderTeamTimeTime won/lost
 26 | 24 | ▼2 | 48 |  | TT | 25 | Walker MaxEF Education - EasyPost | EF Education - EasyPost | 3:26:523:26:52 | ..
 27 | 26 | ▼1 | 145 |  | Hills | 25 | Hessmann MichelMovistar Team | Movistar Team | 3:29:073:29:07 | ..
 28 | 28 | - | 46 |  | Climber | 24 | Steinhauser GeorgEF Education - EasyPost | EF Education - EasyPost | 3:38:103:38:10 | ..
-29 | 29 | - | 167 |  | Classic | 24 | Page HugoCofidis | Cofidis | 3:48:343:48:34 | ..
-30 | 30 | - | 215 |  | Hills | 22 | Dhondt RobbeTeam Picnic PostNL | Team Picnic PostNL | 3:54:193:54:19 | ..
+29 | 29 | - | 167 |  | Classic | 24 | Dhondt RobbeTeam Picnic PostNL | Cofidis | 3:48:343:48:34 | ..
+30 | 30 | - | 215 |  | Hills | 22 | Page HugoCofidis | Team Picnic PostNL | 3:54:193:54:19 | ..
 31 | 32 | ▲1 | 213 |  | Sprint | 23 | Bittner PavelTeam Picnic PostNL | Team Picnic PostNL | 4:02:044:02:04 | ..
 32 | 31 | ▼1 | 152 |  | TT | 24 | Artz HuubLotto Intermarché | Lotto Intermarché | 4:02:134:02:13 | ..
 33 | 33 | - | 87 |  | TT | 22 | Tarling JoshuaNetcompany INEOS | Netcompany INEOS | 4:05:214:05:21 | ..
@@ -936,4 +936,4 @@ Contact us
 Cookie policy
 Sitemap
 OptimaData
-Pageload 0.0511s
+Pageload 0.0567s

@@ -1,12 +1,12 @@
 {
-  "targetStage": 15,
-  "fetchedAt": "2026-07-21T08:45:10Z",
+  "targetStage": 16,
+  "fetchedAt": "2026-07-22T16:31:29Z",
   "pages": [
-    "stage-15",
-    "stage-15-gc",
-    "stage-15-kom",
-    "stage-15-points",
-    "stage-15-youth"
+    "stage-16",
+    "stage-16-gc",
+    "stage-16-kom",
+    "stage-16-points",
+    "stage-16-youth"
   ],
   "failures": []
 }

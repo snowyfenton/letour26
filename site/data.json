@@ -1,7 +1,7 @@
 {
-  "updatedAt": "2026-07-21T09:03:51Z",
-  "standingsAfterStage": 15,
-  "nextStage": 16,
+  "updatedAt": "2026-07-22T09:06:39Z",
+  "standingsAfterStage": 16,
+  "nextStage": 17,
   "restDay": false,
   "note": null,
   "jerseys": {
@@ -33,61 +33,61 @@
       "rank": 2,
       "rider": "Remco Evenepoel",
       "team": "Red Bull - BORA - hansgrohe",
-      "gap": "+ 5:00"
+      "gap": "+ 4:32"
     },
     {
       "rank": 3,
       "rider": "Isaac del Toro",
       "team": "UAE Team Emirates - XRG",
-      "gap": "+ 5:58"
+      "gap": "+ 6:51"
     },
     {
       "rank": 4,
       "rider": "Paul Seixas",
       "team": "Decathlon CMA CGM Team",
-      "gap": "+ 6:23"
+      "gap": "+ 7:11"
     },
     {
       "rank": 5,
-      "rider": "Florian Lipowitz",
-      "team": "Red Bull - BORA - hansgrohe",
-      "gap": "+ 6:48"
+      "rider": "Huub Artz",
+      "team": "Lotto Intermarché",
+      "gap": "+ 9:22"
     },
     {
       "rank": 6,
-      "rider": "Juan Ayuso",
+      "rider": "Mattias Skjelmose",
       "team": "Lidl - Trek",
-      "gap": "+ 7:28"
+      "gap": "+ 10:14"
     },
     {
       "rank": 7,
       "rider": "Lenny Martinez",
       "team": "Bahrain - Victorious",
-      "gap": "+ 9:38"
+      "gap": "+ 12:50"
     },
     {
       "rank": 8,
-      "rider": "Mattias Skjelmose",
-      "team": "Lidl - Trek",
-      "gap": "+ 10:28"
+      "rider": "Tom Pidcock",
+      "team": "Pinarello Q36.5 Pro Cycling Team",
+      "gap": "+ 12:58"
     },
     {
       "rank": 9,
-      "rider": "Tom Pidcock",
-      "team": "Pinarello Q36.5 Pro Cycling Team",
-      "gap": "+ 11:19"
+      "rider": "Jordan Jegat",
+      "team": "TotalEnergies",
+      "gap": "+ 22:50"
     },
     {
       "rank": 10,
-      "rider": "Jordan Jegat",
-      "team": "TotalEnergies",
-      "gap": "+ 19:26"
+      "rider": "Yannis Voisard",
+      "team": "Tudor Pro Cycling Team",
+      "gap": "+ 24:18"
     }
   ],
   "combativity": null,
   "prevStageSummary": null,
   "abandons": {
-    "throughStage": 15,
+    "throughStage": 16,
     "riders": [
       {
         "rider": "Clément Berthet",
@@ -196,35 +196,25 @@
         "team": "NSN Cycling Team",
         "how": "DNF",
         "stage": 15
+      },
+      {
+        "rider": "Florian Lipowitz",
+        "team": "Red Bull - BORA - hansgrohe",
+        "how": "DNF",
+        "stage": 16
+      },
+      {
+        "rider": "Lars Craps",
+        "team": "Lotto Intermarché",
+        "how": "DNS",
+        "stage": 16
       }
     ]
   },
   "odds": null,
   "fantasy": {
-    "formThroughStage": 14,
+    "formThroughStage": 15,
     "days": [
-      {
-        "stage": 16,
-        "headline": "The race against the clock along the shore of Lake Geneva from Évian to Thonon — flat, fast, pure power-TT terrain.",
-        "riderType": "TT specialist",
-        "picks": [
-          {
-            "rider": "Remco Evenepoel",
-            "team": "Red Bull - BORA - hansgrohe",
-            "why": "A former world time-trial champion and the strongest pure specialist against the watch in the field."
-          },
-          {
-            "rider": "Tadej Pogačar",
-            "team": "UAE Team Emirates - XRG",
-            "why": "Loses very little to the dedicated TT men and could extend his GC lead further on a course this fast."
-          },
-          {
-            "rider": "Joshua Tarling",
-            "team": "Netcompany INEOS",
-            "why": "A recognised TT specialist who can post a top result even outside the GC picture."
-          }
-        ]
-      },
       {
         "stage": 17,
         "headline": "A lumpy transition through the foothills of the Chartreuse to Voiron — nominally a sprint stage, but textured enough that a well-drilled breakaway could steal it before the high Alps arrive in earnest.",
@@ -307,13 +297,35 @@
             "why": "A strong, consistent climbing threat who has stayed within touching distance of the GC lead all race — the last mountain day is a final chance to press that attack."
           },
           {
-            "rider": "Florian Lipowitz",
-            "team": "Red Bull - BORA - hansgrohe",
-            "why": "Has been a steady, high-level climber all race and a stage this brutal suits a rider who can pace a long effort rather than just punch."
+            "rider": "Paul Seixas",
+            "team": "Decathlon CMA CGM Team",
+            "why": "The revelation of this Tour in the high mountains, with the legs and team support to threaten a GC podium finish on the toughest climbing day of the race."
+          }
+        ]
+      },
+      {
+        "stage": 21,
+        "headline": "The processional ride into Paris — champagne, photos and truce until the race hits the Champs-Élysées circuit, then the most prestigious sprint of the season.",
+        "riderType": "Sprinter",
+        "picks": [
+          {
+            "rider": "Mads Pedersen",
+            "team": "Lidl - Trek",
+            "why": "Locks in the green jersey and has the pure speed to add a stage win in Paris to cap his Tour."
+          },
+          {
+            "rider": "Biniam Girmay",
+            "team": "NSN Cycling Team",
+            "why": "Has been the most consistent fast finisher in reduced and full bunch sprints all race and will fancy his chances on the Champs-Élysées."
+          },
+          {
+            "rider": "Olav Kooij",
+            "team": "Decathlon CMA CGM Team",
+            "why": "A prolific bunch sprinter who will target the biggest sprint of the season as a fitting finale."
           }
         ]
       }
     ],
-    "strategy": "The stage 15-21 transfer window is open, and this run is brutally climbing-heavy — three summit finishes (18, 19, 20) bookending a flat, fast ITT — so prioritise GC climbers and a TT engine over sprinters, who have little to do until Paris. Use today's transfers to add a pure time-trial specialist for stage 16, then hold your climbing squad steady through the back-to-back Alpe d'Huez days. Save the double-points bonus stage for stage 20 — the last mountain day of the race and the highest-scoring stage on the calendar — and keep a small budget buffer in case the GC picture shifts sharply on the time trial."
+    "strategy": "The stage 15-21 transfer window remains open, and the run-in from stage 17 is climbing-heavy: three summit finishes across stages 18-20, including back-to-back trips up Alpe d'Huez, bookended by a lumpy transition day (17) and the ceremonial sprint into Paris (21). Prioritise your strongest GC climbers for that Alpine block, and keep a genuine breakaway punt in your back pocket for stage 17 before the racing gets serious. Save the double-points bonus stage for stage 20 — the longest and hardest climbing day left in the race — and hold a pure sprinter or two in reserve for the points and stage-win value of the Paris finale."
   }
 }
